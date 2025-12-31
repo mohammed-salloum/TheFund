@@ -50,31 +50,31 @@ The project emphasizes accessibility, scalability, and user experience through a
 
 | 🖼️ Header |
 |------------|
-| ![Header](Screenshots/default/header-page.PNG) |
+| ![Header](screenshots/default/header-page.PNG) |
 
 | 🏠 Home - Hero |
 |----------------|
-| ![Home Hero Section](Screenshots/default/home-hero-page.PNG) |
+| ![Home Hero Section](screenshots/default/home-hero-page.PNG) |
 
 | 🛠️ Services |
 |------------|
-| ![Services](Screenshots/default/services-page.PNG) |
+| ![Services](screenshots/default/services-page.PNG) |
 
 | ℹ️ About Us |
 |-----------|
-| ![About Us](Screenshots/default/about-page.PNG) |
+| ![About Us](screenshots/default/about-page.PNG) |
 
 | 📝 Contact Us |
 |------------|
-| ![Contact Us](Screenshots/default/contact-page.PNG) |
+| ![Contact Us](screenshots/default/contact-page.PNG) |
 
 | ⚙️ Settings |
 |------------|
-| ![Settings](Screenshots/default/settings-page.PNG) |
+| ![Settings](screenshots/default/settings-page.PNG) |
 
 | 🖤 Footer |
 |-----------|
-| ![Footer](Screenshots/default/footer-page.PNG) |
+| ![Footer](screenshots/default/footer-page.PNG) |
 
 ---
 
