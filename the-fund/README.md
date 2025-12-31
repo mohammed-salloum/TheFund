@@ -1,5 +1,5 @@
-🌐 The Fund – Front-End Platform for Investment & Strategic Initiatives
-💼 Personal Project | December 2025  
+🌐 The Fund – Front-End Platform for Investment & Strategic Initiatives  
+💼 Personal Project | December 2025
 
 **The Fund** is a modern bilingual front-end web platform designed to present strategic initiatives, services, and digital participation opportunities.  
 The project emphasizes accessibility, scalability, and user experience through advanced theming, RTL support, and a clean React architecture. No backend or server-side logic is included; all functionality is client-side.
