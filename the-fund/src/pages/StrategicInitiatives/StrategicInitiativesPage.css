@@ -1,0 +1,53 @@
+/* ========================= CSS (StrategicInitiatives.css) ========================= */
+
+
+/* ROOT */
+.initiatives-section {
+font-family: "Cairo", sans-serif;
+}
+
+
+.initiatives-section.light {
+background: #ffffff;
+color: #222;
+}
+
+
+.initiatives-section.dark {
+background: #0f0f0f;
+color: #ffffff;
+}
+
+
+/* TITLES */
+.initiatives-title {
+font-size: 32px;
+font-weight: 700;
+color: var(--primary-color);
+}
+
+
+.initiatives-subtitle {
+font-size: 18px;
+color: var(--text-color);
+}
+
+
+/* BUTTON */
+.btn-initiatives {
+background: var(--primary-color);
+color: #fff;
+padding: 12px 32px;
+border-radius: 40px;
+font-weight: 600;
+border: none;
+cursor: pointer;
+transition: 0.3s;
+}
+
+
+.btn-initiatives:hover {
+transform: translateY(-3px);
+opacity: 0.9;
+}
+

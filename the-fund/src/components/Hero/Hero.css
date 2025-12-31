@@ -1,0 +1,523 @@
+/* =========================== */
+/* Hero.css — FINAL STABLE FIX */
+/* =========================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Cairo", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ================= BACKGROUND ================= */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-color),
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+}
+
+/* ================= TOP HORIZONTAL LINE ================= */
+
+.top-red-line {
+  position: absolute;
+  top: 150px; /* 🔒 أعلى من النص */
+  width: 300px;
+  height: 2px;
+  background: var(--primary-color);
+  z-index: 20;
+}
+
+.hero-section.ltr .top-red-line {
+  right: 0;
+}
+
+.hero-section.rtl .top-red-line {
+  left: 0;
+}
+
+/* ================= CONTENT ================= */
+
+.hero-content {
+  position: relative;
+  z-index: 30;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px; /* 🔒 يضمن عدم التداخل */
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.hero-sub {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+/* ================= CENTER UI (VERTICAL LINE) ================= */
+
+.hero-center-ui {
+  position: absolute;
+  top: 350px; /* 🔒 قيمة ثابتة لا تتأثر بالمحتوى */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.center-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.track-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.track-line {
+  width: 2px;
+  height: 28px;
+  background: var(--primary-color);
+}
+
+.track-line.to-button {
+  height: 70px;
+}
+
+.track-num {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.track-num.active {
+  color: red;
+}
+
+/* الزر الأساسي */
+.scroll-btn {
+  margin-top: 6px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* السهم داخل الزر */
+.arrow-down {
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+/* ===== Hover لأجهزة الكمبيوتر والتابلت ===== */
+
+.scroll-btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .scroll-btn:hover {
+    transform: scale(1.05); /* تكبير خفيف جدًا */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* ظل خفيف يعطي depth */
+  }
+}
+
+@media (hover: none) {
+  .scroll-btn:active {
+    transform: scale(0.97); /* ضغط خفيف جدًا */
+  }
+}
+
+
+/* Transition عام */
+.scroll-btn,
+.arrow-down {
+  transition: transform 0.25s ease;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+/* 🖥️ Desktop & Tablet → بمحاذاة العنوان */
+.hero-social-icons {
+  position: absolute;
+  top: 120px; /* 🔒 نفس مستوى العنوان */
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  z-index: 35;
+}
+
+.hero-section.ltr .hero-social-icons {
+  left: 40px;
+}
+
+.hero-section.rtl .hero-social-icons {
+  right: 40px;
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .social-btn:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+@media (hover: none) {
+  .social-btn:active {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(0.95);
+  }
+}
+
+/* ================= TRIANGLE ================= */
+
+.triangle-wrap {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 20vh; 
+  background: var(--bg-color);
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  z-index: 10;
+}
+
+/* ================================================= */
+/* =================== RESPONSIVE ================== */
+/* ================================================= */
+
+/* ---------- Large & Medium Screens ---------- */
+@media (max-width: 1326px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+     .hero-center-ui {
+     top: 280px; 
+  }
+      .track-line {
+    height: 15px;
+  }
+
+  .track-line.to-button {
+    height: 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+ .top-red-line {
+    width: 150px;
+  }
+    .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-sub {
+    font-size: 1rem;
+  }
+  .social-btn {
+  width: 45px;
+  height: 45px;
+  }
+.hero-section.ltr .hero-social-icons {
+  left: 15px;
+}
+
+.hero-section.rtl .hero-social-icons {
+  right: 15px;
+}
+  .hero-center-ui {
+     top: 255px; 
+  }
+    .track-line {
+    height: 20px;
+  }
+
+  .track-line.to-button {
+    height: 40px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+
+  .top-red-line {
+    width: 70px;
+      top: 115px;
+  }
+
+  .hero-content {
+    padding-top: 70px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+  }
+
+   .hero-center-ui {
+    top: 240px;
+  }
+  .track-line {
+    height: 22px;
+  }
+
+  .track-line.to-button {
+    height: 40px;
+  }
+  /* 📱 الأيقونات بمحاذاة الخط العمودي */
+  .hero-social-icons {
+    top: 230px;
+    gap: 30px;
+  }
+
+  .hero-section.ltr .hero-social-icons {
+    left: 14px;
+  }
+
+  .hero-section.rtl .hero-social-icons {
+    right: 14px;
+  }
+
+  .social-btn {
+    width: 32px;
+    height: 32px;
+  }
+    .track-line.to-button {
+    height: 50px;
+  }
+
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 480px) {
+
+  
+  .top-red-line {
+    width: 35px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+    .track-line {
+    height: 22px;
+  }
+
+  .track-line.to-button {
+    height: 50px;
+  }
+}
+
+
+/* ---------- Extra Small ---------- */
+@media (max-width: 350px) {
+
+  .top-red-line {
+    width: 30px;
+  }
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-sub {
+    font-size: 0.85rem;
+  }
+  
+}
+
+/* ---------- Landscape ---------- */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  /* المحتوى */
+  .hero-content {
+    padding-top: 36px;
+  }
+
+  .hero-title {
+    font-size: 1.2rem; /* كان صغير زيادة */
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+  }
+
+  /* الخط العلوي */
+  .top-red-line {
+    top: 70px;
+    width: 60px;
+  }
+
+  /* المسار المركزي + الزر */
+  .hero-center-ui {
+    top: 150px;
+ 
+  }
+
+  .track-item {
+    gap: 3px;
+  }
+
+  .track-line {
+    height: 10px;
+  }
+
+  .track-line.to-button {
+    height: 22px;
+  }
+
+  .track-num {
+    font-size: 1rem;
+  }
+
+  .scroll-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .arrow-down {
+    width: 7px;
+    height: 7px;
+    border-width: 1.5px;
+  }
+
+  /* أيقونات السوشيال */
+  .hero-social-icons {
+    top: 140px;
+    gap: 10px;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .triangle-wrap {
+  height: 30vh; 
+}
+
+}
+
+@media (max-height: 400px) and (orientation: landscape) {
+
+  .hero-content {
+    padding-top: 30px;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-sub {
+    font-size: 0.8rem;
+  }
+
+  .hero-center-ui {
+    top: 140px;
+  }
+
+  .track-item {
+    gap: 4px;
+  }
+
+  .track-line {
+    height: 10px;
+  }
+
+  .track-line.to-button {
+    height: 20px;
+  }
+
+  .track-num {
+    font-size: 0.75rem;
+  }
+
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .arrow-down {
+    width: 7px;
+    height: 7px;
+    border-width: 1.5px;
+  }
+
+  /* أيقونات السوشيال */
+  .hero-social-icons {
+    top: 130px;
+    gap: 10px;
+  }
+
+  .social-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+}

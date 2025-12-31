@@ -1,0 +1,156 @@
+/* =========================
+   القسم الأساسي
+========================= */
+.partners-section {
+  background: var(--bg-color);
+  text-align: center;
+  padding: 60px 0;
+  margin-bottom: 0 !important;
+  overflow: hidden;
+  padding: 60px 0;
+  min-height: auto;
+}
+
+/* =========================
+   العنوان
+========================= */
+.partners-title {
+  color: var(--primary-color);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* =========================
+   صف اللوغوهات
+========================= */
+.partners-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 10px;              /* يمنع الالتصاق بالحواف */
+  flex-wrap: nowrap;
+}
+
+/* =========================
+   الصور
+========================= */
+.partner-img {
+  max-height: 120px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* =========================
+   النقاط
+========================= */
+.partners-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: var(--primary-color);
+}
+
+/* ==================================================
+   🖥️ شاشات كبيرة جداً (1200px+)
+   تقليل الفجوة + تصغير الصور
+================================================== */
+@media (min-width: 1200px) {
+  .partners-row {
+    gap: 1.2rem;
+    padding: 0 40px;
+  }
+
+  .partner-img {
+    max-height: 100px;
+  }
+}
+
+
+
+/* ==================================================
+   📱 تابلت + موبايل أفقي
+================================================== */
+@media (max-width: 768px) {
+  .partners-title {
+    font-size: 26px;
+    margin-bottom: 35px;
+  }
+
+  .partners-row {
+    gap: 0.8rem;
+    padding: 0 24px;
+  }
+
+  .partner-img {
+    max-height: 120px;
+  }
+}
+
+/* ==================================================
+   📱 موبايل عمودي
+   تكبير الصورة لتعبئة العرض
+================================================== */
+@media (max-width: 480px) {
+  .partners-row {
+    padding: 0 16px;
+  }
+
+  .partner-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    max-height: none;        /* مهم */
+    aspect-ratio: 3 / 1;     /* شكل لوجو احترافي */
+    margin: 0 auto;
+  }
+}
+
+
+/* ==================================================
+   📱 موبايل صغير جداً (350px)
+================================================== */
+@media (max-width: 350px) {
+  .partners-section {
+    padding: 40px 0 50px;
+  }
+
+  .partner-img {
+    max-width: 240px;
+    aspect-ratio: 3 / 1;
+  }
+}
+
+
+/* ==================================================
+   🔄 موبايل Landscape
+================================================== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .partners-row {
+    flex-wrap: nowrap;
+    justify-content: center;   /* ✔ توسيط */
+    padding: 0 32px;
+    gap: 1rem;
+  }
+
+  .partner-img {
+    max-height: 70px;
+    flex: 1 1 0;
+  }
+}

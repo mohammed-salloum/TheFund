@@ -1,0 +1,233 @@
+/* =========================
+   صفحة تسجيل الدخول
+========================= */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 2rem 1rem; /* مسافة طبيعية */
+  font-family: var(--main-font);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   حاوية الفورم
+========================= */
+.auth-container {
+  padding: 1rem 1.5rem;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: var(--border-radius);
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.auth-container label {
+  display: block;
+  margin-top: 0.4rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* =========================
+   الحقول
+========================= */
+.auth-container input {
+  width: 100%;
+  height: 40px;
+  padding: 0 0.5rem;
+  margin-bottom: 0.35rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--input-text);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* إذا الصفحة LTR */
+.auth-page[dir="ltr"] .auth-container input {
+  direction: ltr;
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-right: 2.5rem; /* مساحة للأيقونة */
+}
+
+/* إذا الصفحة RTL */
+.auth-page[dir="rtl"] .auth-container input {
+  direction: rtl;
+  text-align: right;
+  padding-right: 0.5rem;
+  padding-left: 2.5rem; /* مساحة للأيقونة */
+}
+
+.auth-container input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 4px 1px var(--accent-color);
+}
+
+/* =========================
+   حقل الباسوورد مع أيقونة العين
+========================= */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-eye {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+/* موقع الأيقونة حسب اللغة */
+.auth-page[dir="ltr"] .toggle-eye {
+  right: 0.8rem;
+}
+
+.auth-page[dir="rtl"] .toggle-eye {
+  left: 0.8rem;
+}
+
+/* =========================
+   زر الإرسال
+========================= */
+.auth-container button,
+.auth-submit-btn {
+  width: 100%;
+  height: 38px;
+  margin-top: 0.8rem;
+  background-color: var(--sign-in-color);
+  color: var(--sign-in-hover-text);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.auth-container button:hover:not(:disabled),
+.auth-submit-btn:hover:not(:disabled) {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.auth-submit-btn:disabled,
+.auth-container button:disabled {
+  background-color: var(--sign-in-disabled);
+  cursor: not-allowed;
+}
+
+.btn-text {
+  display: inline-block;
+}
+
+/* =========================
+   الرسائل تحت الحقول
+========================= */
+.auth-message {
+  margin: 0.4rem 0;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.auth-message.hidden {
+  opacity: 0;
+}
+
+/* =========================
+   روابط التنقل
+========================= */
+.link-text {
+  text-align: start;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.single-link {
+  margin-top: 0.4rem;
+}
+
+.inline-link {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  justify-content: flex-start;
+}
+
+.toggle-link,
+.reset-link {
+  color: var(--link-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.toggle-link:hover,
+.reset-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* =========================
+   رسائل الترحيب (toast)
+========================= */
+.toast-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--form-success-bg);
+  color: var(--form-success-text);
+  border: 1px solid var(--form-success-border);
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInOut 10s forwards;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translate(-50%, -20px); }
+  10%  { opacity: 1; transform: translateX(-50%); }  /* fade in */
+  85%  { opacity: 1; transform: translateX(-50%); }  /* stay */
+  100% { opacity: 0; transform: translate(-50%, -20px); } /* fade out */
+}
+
+/* =========================
+   responsive للموبايل
+========================= */
+@media (max-width: 480px) {
+  .auth-container {
+    width: 90%;
+    padding: 0.8rem 1rem;
+  }
+
+  .inline-link {
+    font-size: 0.85rem;
+    gap: 0.25rem;
+  }
+}

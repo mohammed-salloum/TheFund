@@ -1,0 +1,500 @@
+
+/* --------------------------------------------------
+   DEFAULT THEME (Unified)
+-------------------------------------------------- */
+body[data-theme="default"] {
+  --primary-color: #003b73;
+  --secondary-color: #00c7d9;
+  --accent-color: #00c7d9;
+
+  --bg-color: #ffffff;
+  --text-color: #003b73;
+
+  --navbar-bg: #003b73;
+  --navbar-text: #ffffff;
+  --navbar-icon: #ffffff;
+  --navbar-hover: rgba(255, 255, 255, 0.12);
+
+  --subnav-bg: #00c7d9;
+  --subnav-text: #ffffff;
+  --subnav-icon: #ffffff;
+  --subnav-hover: rgba(0, 0, 0, 0.1);
+
+  --card-bg: #ffffff;
+  --card-text: #003b73;
+  --card-border: #d0d0d0;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+
+  --modal-bg: #ffffff;
+  --modal-text: #003b73;
+  --modal-header-bg: #003b73;
+  --modal-header-text: #00c7d9;
+  --modal-icon-color: #003b73;
+
+  --border-color: #cccccc;
+  --input-bg: #ffffff;
+  --input-text: #003b73;
+
+  --button-bg: #003b73;
+  --button-text: #ffffff;
+  --button-hover: #014a94;
+
+/* Button Sign In — Default Theme */
+--sign-in-color: #003b73;          /* نفس لون الزر الأساسي */
+--sign-in-hover-color: #014a94;    /* نفس hover المستخدم في الأزرار */
+--sign-in-hover-text: #ffffff;     /* أبيض واضح */
+--sign-in-disabled: #8ab1d6;       /* أزرق باهت يناسب الثيم */
+
+
+  --link-color: #003b73;
+  --link-hover: #00c7d9;
+
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #003b73;
+  --dropdown-hover-bg: #f0f0f0;
+  --dropdown-selected-bg: #00c7d9;
+  --selected-text-color: #ffffff;
+
+  --icon-color: #003b73;
+  --spinner-color: #003b73;
+
+  --error-color: #d9534f;
+  --primary-hover: #014a94;
+
+  --star-empty: #cccccc;
+  --star-filled: #f2c94c;
+
+  --scroll-thumb: rgba(0, 0, 0, 0.2);
+  --scroll-track: rgba(0, 0, 0, 0.05);
+
+    --clients-dots-color: #cccccc;       /* لون الدوائر العادية */
+  --clients-dots-active: #003b73;  
+}
+
+/* --------------------------------------------------
+   EVERGREEN THEME (Unified)
+-------------------------------------------------- */
+body[data-theme="evergreen"] {
+  --primary-color: #0b5d4b;
+  --secondary-color: #2abfa2;
+--accent-color: #3aa38b;
+
+  --bg-color: #eef5f3;
+  --text-color: #0f2b27;
+
+  --navbar-bg: #0b5d4b;
+  --navbar-text: #ffffff;
+  --navbar-icon: #ffffff;
+  --navbar-hover: rgba(255, 255, 255, 0.12);
+
+  --subnav-bg: #2abfa2;
+  --subnav-text: #ffffff;
+  --subnav-icon: #ffffff;
+  --subnav-hover: rgba(0, 0, 0, 0.1);
+
+  --card-bg: #ffffff;
+  --card-text: #0f2b27;
+  --card-border: #d5e7e3;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+
+  --modal-bg: #ffffff;
+  --modal-text: #0f2b27;
+  --modal-header-bg: #0b5d4b;
+  --modal-header-text: #ffffff;
+  --modal-icon-color: #0b5d4b;
+
+  --border-color: #c0d7d2;
+  --input-bg: #ffffff;
+  --input-text: #0f2b27;
+
+  --button-bg: #0b5d4b;
+  --button-text: #ffffff;
+  --button-hover: #0d6f5c;
+
+/* 🔐 زر تسجيل الدخول — Evergreen Theme (المتناسق مع ثيمك الحالي) */
+--sign-in-color: #0b5d4b;          /* نفس الزر الرئيسي */
+--sign-in-hover-color: #0d6f5c;    /* Hover نفس المستخدم في الثيم */
+--sign-in-hover-text: #ffffff;     /* نص أبيض ثابت */
+--sign-in-disabled: #9acfc5;       /*Mint淡 أخضر باهت • منسجم مع #2abfa2 */
+
+
+
+  --link-color: #0b5d4b;
+  --link-hover: #2abfa2;
+
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #0f2b27;
+  --dropdown-hover-bg: #eef5f3;
+  --dropdown-selected-bg: #2abfa2;
+  --selected-text-color: #ffffff;
+
+  --icon-color: #0b5d4b;
+  --spinner-color: #0b5d4b;
+
+  --error-color: #b84343;
+  --primary-hover: #0d6f5c;
+
+  --star-empty: #b7cec9;
+  --star-filled: #f2c94c;
+
+  --scroll-thumb: rgba(11, 93, 75, 0.4);
+  --scroll-track: rgba(0, 0, 0, 0.08);
+
+    --clients-dots-color: #b7cec9;
+  --clients-dots-active: #0b5d4b;
+}
+
+/* --------------------------------------------------
+   COLORBLIND THEME (Unified)
+-------------------------------------------------- */
+body[data-theme="colorblind"] {
+  --primary-color: #333333;
+  --secondary-color: #bbbbbb;
+  --accent-color: #666666;
+
+  --bg-color: #f2f2f2;
+  --text-color: #222222;
+
+--navbar-bg: #a0a0a0;
+  --navbar-text: #222222;
+  --navbar-icon: #444444;
+  --navbar-hover: #cccccc;
+
+  --subnav-bg: #cfcfcf;
+  --subnav-text: #222222;
+  --subnav-icon: #222222;
+  --subnav-hover: #bdbdbd;
+
+  --card-bg: #dcdcdc;
+  --card-text: #222222;
+  --card-border: #4b5563;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+
+  --modal-bg: #dcdcdc;
+  --modal-text: #222222;
+  --modal-header-bg: #bdbdbd;
+  --modal-header-text: #000000;
+  --modal-icon-color: #000000;
+
+  --border-color: #bbbbbb;
+  --input-bg: #f0f0f0;
+  --input-text: #222222;
+
+  --button-bg: #555555;
+  --button-text: #ffffff;
+  --button-hover: #444444;
+
+    /* 🔐 زر تسجيل الدخول */
+    --sign-in-color: #555555;        /* لون الزر الرمادي */
+  --sign-in-hover-color: #777777;  /* عند Hover */
+  --sign-in-hover-text: #ffffff;   /* نص أبيض عند Hover */
+    --sign-in-disabled: #888;
+
+  --link-color: #333333;
+  --link-hover: #555555;
+
+  --dropdown-bg: #e0e0e0;
+  --dropdown-text: #222222;
+  --dropdown-hover-bg: #cccccc;
+  --dropdown-selected-bg: #555555;
+  --selected-text-color: #f5f5f5;
+
+  --icon-color: #333333;
+  --spinner-color: #555555;
+
+  --error-color: #555555;
+  --primary-hover: #444444;
+
+  --star-empty: #aaaaaa;
+  --star-filled: #555555;
+
+  --scroll-thumb: rgba(85,85,85,0.5);
+  --scroll-track: rgba(0,0,0,0.08);
+
+    --clients-dots-color: #aaaaaa;
+  --clients-dots-active: #555555;
+}
+/* --------------------------------------------------
+   READING THEME (Normalized & Full)
+/* -------------------------------------------------- */
+body[data-theme="reading"] {
+  --bg-color: #fdf6e3;
+  --text-color: #3b3a36;
+
+  --primary-color: #8c6f44;
+  --secondary-color: #D8B26B;
+  --accent-color: #cfa76f;
+
+  --input-bg: #f9f3e7;
+  --input-text: #3b3a36;
+
+  --border-color: #e6e2d3;
+  --card-bg: #f9f3e7;
+  --card-border: #cfa76f;
+  --card-shadow: rgba(0,0,0,0.04);
+
+  --icon-color: #cfa76f;
+  --spinner-color: #cfa76f;
+
+  --error-color: #b91c1c;
+  --primary-hover: #d8b26b;
+
+  /* ------------------------------
+      Navbar (MUST be darker)
+     ------------------------------ */
+  --navbar-bg:  #b8936c;
+  --navbar-text: #3b3a36;
+  --navbar-icon: #cfa76f;
+  --navbar-hover: rgba(0,0,0,0.10);
+
+  /* ------------------------------
+      Subnav (Settings Bar) DARKER
+     ------------------------------ */
+  --subnav-bg: #e2d4b6;             /* أغمق من navbar بدرجة بسيطة */
+  --subnav-text: #3b3a36;
+  --subnav-icon: #cfa76f;
+  --subnav-hover: rgba(0,0,0,0.10);
+
+  /* Card Text */
+  --card-text: #3b3a36;
+
+  /* Dropdown */
+  --dropdown-bg: #f9f3e7;
+  --dropdown-hover-bg: #f4ecd7;
+  --dropdown-selected-bg: #cfa76f;
+  --dropdown-text: #3b3a36;
+  --selected-text-color: #ffffff;
+
+  /* Buttons */
+  --button-bg: #cfa76f;
+  --button-text: #ffffff;
+  --button-hover: #d8b26b;
+
+  /* Sign In Button */
+  --sign-in-color: #cfa76f;
+  --sign-in-hover-color: #d8b26b;
+  --sign-in-hover-text: #ffffff;
+  --sign-in-disabled: #d8b26b;
+
+  /* Modal */
+  --modal-bg: #f9f3e7;
+  --modal-text: #3b3a36;
+  --modal-header-bg: #cfa76f;
+  --modal-header-text: #ffffff;
+  --modal-icon-color: #cfa76f;
+
+  /* Scrollbar */
+  --scroll-thumb: rgba(207, 167, 111, 0.45);
+  --scroll-track: rgba(59, 58, 54, 0.1);
+
+  /* Stars */
+  --star-empty: #d6c69b;
+  --star-filled: #cfa76f;
+
+  /* Links */
+  --link-color: #cfa76f;
+  --link-hover: #d8b26b;
+
+  /* Social Media */
+  --social-facebook: #3b5998;
+  --social-x: #555555;
+  --social-linkedin: #0a66c2;
+  --social-youtube: #d95c4a;
+  --social-instagram: #d88b9c;
+  --social-pinterest: #b87a6f;
+
+  /* Client Section */
+  --clients-arrow-color: #cfa76f;
+  --clients-arrow-hover: #d8b26b;
+  --clients-dots-color: #d6c69b;
+  --clients-dots-active: #cfa76f;
+  --clients-text-color: #3b3a36;
+  --clients-name-color: #cfa76f;
+  --clients-role-color: #575148;
+
+  /* Forms Feedback */
+  --form-success-bg: #f9f3e7;
+  --form-success-text: #3b3a36;
+  --form-success-border: #cfa76f;
+
+  --form-error-bg: #fcebea;
+  --form-error-text: #b91c1c;
+  --form-error-border: #f0a6a6;
+
+    --clients-dots-color: #6a5f4d;
+  --clients-dots-active: #b89663;
+}
+
+
+/* --------------------------------------------------
+   DEFAULT THEME — DARK MODE (Normalized)
+-------------------------------------------------- */
+body[data-theme="default"][data-dark="true"] {
+  --bg-color: #0d1117;
+  --text-color: #e6edf3;
+
+  --primary-color: #1f6feb;
+  --secondary-color: #2d81ff;
+  --accent-color: #2d81ff;
+
+  --navbar-bg: #1A2642;
+  --navbar-text: #e6edf3;
+  --navbar-icon: #e6edf3;
+
+  --subnav-bg: #1e293b;
+  --subnav-text: #e6edf3;
+  --subnav-icon: #e6edf3;
+  --subnav-hover: rgba(255,255,255,0.08);
+
+  --card-bg: #161b22;
+  --card-text: #e6edf3;
+  --card-border: #2e3440;
+
+  --modal-bg: #161b22;
+  --modal-text: #e6edf3;
+  --modal-header-bg: #1f6feb;
+  --modal-header-text: #ffffff;
+  --modal-icon-color: #2d81ff;
+
+  --input-bg: #0f172a;
+  --input-text: #e6edf3;
+
+  --dropdown-bg: #1e293b;
+  --dropdown-hover-bg: #273449;
+  --dropdown-text: #e6edf3;
+  --dropdown-selected-bg: #1f6feb;
+  --selected-text-color: #ffffff;
+
+  --scroll-thumb: rgba(255,255,255,0.2);
+  --scroll-track: rgba(255,255,255,0.05);
+
+  filter: none !important;
+}
+
+
+/* --------------------------------------------------
+   EVERGREEN THEME — DARK MODE (Normalized)
+-------------------------------------------------- */
+body[data-theme="evergreen"][data-dark="true"] {
+  --bg-color: #0b1513;
+  --text-color: #d8f3ec;
+
+  --primary-color: #0c3f32;
+  --secondary-color: #1f8a72;
+  --accent-color: #2abfa2;
+
+  --navbar-bg: #0c3f32;
+  --navbar-text: #d8f3ec;
+  --navbar-icon: #d8f3ec;
+
+  --subnav-bg: #122822;
+  --subnav-text: #d8f3ec;
+  --subnav-icon: #2abfa2;
+  --subnav-hover: rgba(255,255,255,0.07);
+
+  --card-bg: #10201d;
+  --card-border: #1c3a34;
+  --card-text: #d8f3ec;
+
+  --modal-bg: #10201d;
+  --modal-text: #d8f3ec;
+  --modal-header-bg: #0c3f32;
+  --modal-header-text: #ffffff;
+  --modal-icon-color: #2abfa2;
+
+  --input-bg: #0f1e1b;
+  --input-text: #d8f3ec;
+
+  --dropdown-bg: #0f1e1b;
+  --dropdown-text: #d8f3ec;
+  --dropdown-hover-bg: #1c3a34;
+  --dropdown-selected-bg: #2abfa2;
+  --selected-text-color: #0b1513;
+
+  --scroll-thumb: rgba(42,191,162,0.35);
+  --scroll-track: rgba(255,255,255,0.05);
+
+  filter: none !important;
+}
+
+
+/* --------------------------------------------------
+   READING THEME — DARK MODE (NEW + Normalized)
+-------------------------------------------------- */
+body[data-theme="reading"][data-dark="true"] {
+  --bg-color: #1b1a17;            /* خلفية داكنة مع دفء بسيط */
+  --text-color: #e8e3d8;          /* نص بيج مريح للقراءة */
+
+  --primary-color: #b89663;       /* نفس الأصفر الدافئ */
+  --secondary-color: #7f9584;     /* أخضر خافت */
+  --accent-color: #b89663;
+
+  --navbar-bg: #1f1e1b;
+  --navbar-text: #e8e3d8;
+  --navbar-icon: #b89663;
+
+  --subnav-bg: #24231f;
+  --subnav-text: #e8e3d8;
+  --subnav-icon: #b89663;
+  --subnav-hover: rgba(255,255,255,0.06);
+
+  --card-bg: #24231f;
+  --card-border: #b89663;
+  --card-text: #e8e3d8;
+  --card-shadow: rgba(0,0,0,0.15);
+
+  --modal-bg: #24231f;
+  --modal-text: #e8e3d8;
+  --modal-header-bg: #b89663;
+  --modal-header-text: #1b1a17;
+  --modal-icon-color: #b89663;
+
+  --input-bg: #2c2b28;
+  --input-text: #e8e3d8;
+
+  --dropdown-bg: #2c2b28;
+  --dropdown-hover-bg: #3a3935;
+  --dropdown-selected-bg: #b89663;
+  --dropdown-text: #e8e3d8;
+  --selected-text-color: #1b1a17;
+
+  --scroll-thumb: rgba(185,150,99,0.35);
+  --scroll-track: rgba(255,255,255,0.05);
+
+  /* Stars */
+  --star-empty: #6a5f4d;
+  --star-filled: #b89663;
+
+  /* Links */
+  --link-color: #b89663;
+  --link-hover: #d0a870;
+
+  /* Clients Section */
+  --clients-arrow-color: #b89663;
+  --clients-arrow-hover: #d0a870;
+  --clients-dots-color: #6a5f4d;
+  --clients-dots-active: #b89663;
+  --clients-text-color: #e8e3d8;
+  --clients-name-color: #b89663;
+  --clients-role-color: #c5bea9;
+
+  /* Social media */
+  --social-facebook: #8ba0d4;
+  --social-x: #bbbbbb;
+  --social-linkedin: #5c8ec9;
+  --social-youtube: #d37a6a;
+  --social-instagram: #c694a1;
+  --social-pinterest: #b38a7f;
+
+  /* Form Messages */
+  --form-success-bg: #2c2b28;
+  --form-success-text: #e8e3d8;
+  --form-success-border: #b89663;
+
+  --form-error-bg: #3a2a2a;
+  --form-error-text: #ffbdbd;
+  --form-error-border: #e38a8a;
+
+  filter: none !important;
+}
+

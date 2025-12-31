@@ -1,0 +1,195 @@
+/* ==================================================
+   SITEMAP MODAL — FULL RESPONSIVE
+================================================== */
+
+/* Overlay */
+.sitemap-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 16px;
+}
+
+/* Modal */
+.sitemap-modal {
+  width: 600px;
+  max-width: 100%;
+  background: var(--modal-bg);
+  color: var(--modal-text);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.25s ease;
+}
+
+/* Header */
+.sitemap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.sitemap-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+.sitemap-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sitemap-title-icon {
+  font-size: 22px;
+  color: var(--modal-icon-color);
+}
+
+/* Close Button */
+.sitemap-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--modal-icon-color);
+}
+
+.sitemap-close-icon {
+  font-size: 26px;
+}
+
+/* Body */
+.sitemap-body {
+  margin-top: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* List */
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-list li {
+  margin: 14px 0;
+}
+
+.sitemap-list button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-align: start;
+}
+
+.sitemap-list button:hover {
+  text-decoration: underline;
+}
+
+/* ==================================================
+   BREAKPOINTS
+================================================== */
+
+/* 1326px */
+@media (max-width: 1326px) {
+  .sitemap-modal {
+    width: 560px;
+  }
+}
+
+/* 1200px */
+@media (max-width: 1200px) {
+  .sitemap-modal {
+    width: 520px;
+  }
+
+  .sitemap-list button {
+    font-size: 17px;
+  }
+}
+
+/* 992px */
+@media (max-width: 992px) {
+  .sitemap-modal {
+    width: 90%;
+    padding: 22px;
+  }
+
+  .sitemap-header h3 {
+    font-size: 18px;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .sitemap-modal {
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .sitemap-list button {
+    font-size: 16px;
+  }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+  .sitemap-modal {
+    padding: 16px;
+  }
+
+  .sitemap-header h3 {
+    font-size: 16px;
+  }
+
+  .sitemap-list button {
+    font-size: 15px;
+  }
+}
+
+/* 350px */
+@media (max-width: 350px) {
+  .sitemap-modal {
+    padding: 14px;
+  }
+
+  .sitemap-list button {
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+   LANDSCAPE (Mobile)
+================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .sitemap-modal {
+    max-height: 90vh;
+    padding: 16px;
+  }
+
+  .sitemap-body {
+    max-height: 55vh;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,270 @@
+/* ================================================
+   Services Section Wrapper
+================================================= */
+.services-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--navbar-bg);
+  overflow: hidden;
+  padding: 60px 0 20px 0;
+}
+
+/* Background Overlay */
+.services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/services/hands.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 170%;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.services-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------
+   Title
+--------------------------------------------- */
+.services-title {
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* ---------------------------------------------
+   Tabs
+--------------------------------------------- */
+.services-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.service-tab {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 1px solid  var(--accent-color);
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(4px);
+    background: none;
+    color: #fff;
+}
+
+.service-tab.active {
+  background: var(--accent-color);
+  color: var(--button-text);
+}
+
+/* ---------------------------------------------
+   COMING SOON (Post-Finance)
+--------------------------------------------- */
+.coming-soon {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+/* ================================================
+   Services Grid
+================================================= */
+.services-grid {
+  display: grid;
+  position: relative;
+  place-items: center;
+  margin: 0 auto;
+  grid-gap: 1rem;
+  width: 50%;
+  justify-content: center;   /* اجعل الشبكة دائمًا في المنتصف أفقياً */
+  align-content: center;     /* اجعل الشبكة دائمًا في المنتصف عمودياً */
+}
+
+
+
+/* Vertical Lines */
+.v-line {
+  position: absolute;
+  width: 2px;
+  background:var(--accent-color);
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* Horizontal Lines */
+.h-line {
+  position: absolute;
+  height: 2px;
+  background:var(--accent-color);
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* ---------------------------------------------
+   Desktop ≥1200px
+--------------------------------------------- */
+@media (min-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    width: 50%;
+  }
+
+  .v1 { left: 25%; display: block; }
+  .v2 { left: 50%; display: block; }
+  .v3 { left: 75%; display: block; }
+
+  .h-line:nth-child(1) { top: 50%; display: block; }
+}
+
+/* ---------------------------------------------
+   Tablet 768–1199px
+   2 أعمدة + 1 خط عمودي + 3 خطوط أفقية
+--------------------------------------------- */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* فاصل عمودي واحد */
+  .v-line { display: block; left: 50%; }
+
+  /* 3 خطوط أفقية لتقسيم الصفوف */
+  .h-line:nth-child(1) { top: 33.33%; display: block; }
+  .h-line:nth-child(2) { top: 66.66%; display: block; }
+  .h-line:nth-child(3) { top: 100%; display: block; }
+
+  /* إخفاء خطوط غير ضرورية */
+  .v1, .v2, .v3 { display: none; }
+}
+
+/* ---------------------------------------------
+   Mobile <768px
+   عمود واحد + خطوط أفقية فقط
+--------------------------------------------- */
+@media (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .v-line { display: none; }
+
+  /* 6 خطوط أفقية لتقسيم كل عنصر */
+  .h-line:nth-child(1) { top: 16.66%; display: block; }
+  .h-line:nth-child(2) { top: 33.33%; display: block; }
+  .h-line:nth-child(3) { top: 50%; display: block; }
+  .h-line:nth-child(4) { top: 66.66%; display: block; }
+  .h-line:nth-child(5) { top: 83.33%; display: block; }
+  .h-line:nth-child(6) { top: 100%; display: block; }
+
+
+}
+
+/* ---------------------------------------------
+   Service Cards
+--------------------------------------------- */
+.service-card {
+  padding: 10px 5px;
+  text-align: center;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--primary-color);
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.service-card:hover {
+
+  backdrop-filter: blur(4px);
+}
+
+.service-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  transition: 0.3s;
+  color: white;
+}
+
+.service-card-subtitle {
+  opacity: 0.85;
+  font-size: 14px;
+  color: var(--navbar-text);
+}
+
+.service-card.active .service-card-title,
+.service-card:hover .service-card-title {
+  color: var(--secondary-color);
+}
+
+/* Hover Content */
+.card-hover {
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-card:hover .card-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons */
+.card-btn,
+.card-details {
+  display: block;
+  width: 120px;
+  text-align: center;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  background: var(--accent-color);
+  text-decoration: none !important;
+}
+
+/* ---------------------------------------------
+   Small Screens ≤400px
+   أزرار التاب تحت بعض
+--------------------------------------------- */
+@media (max-width: 400px) {
+  .services-tabs {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .service-tab {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 0;
+  }
+}

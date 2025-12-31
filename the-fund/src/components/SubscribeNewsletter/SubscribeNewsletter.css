@@ -1,0 +1,134 @@
+/* --------------------------------------------------
+   Subscribe Newsletter Component
+   Uses Unified Theme Variables
+-------------------------------------------------- */
+
+.newsletter-section {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: clamp(2rem, 5vw, 4rem); /* متجاوب على كل الشاشات */
+}
+
+.newsletter-title {
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  font-size: clamp(1.4rem, 2.5vw, 2.6rem);
+}
+
+.newsletter-subtitle {
+  text-align: center;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  color: var(--text-color);
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: clamp(10px, 2vw, 14px);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: 0.25s ease-in-out;
+}
+
+.newsletter-input::placeholder {
+  color: var(--input-text);
+  opacity: 0.5;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-submit-newsletter {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 26px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  white-space: nowrap;
+}
+
+.btn-submit-newsletter:hover {
+  background: var(--button-hover);
+}
+
+.btn-newsletter {
+  background: var(--primary-color);
+  color: var(--button-text);
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 24px);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.btn-newsletter:hover {
+  background: var(--primary-hover);
+}
+
+/* -------------------------
+   Responsive
+------------------------- */
+
+/* شاشات صغيرة جدًا حتى 350px */
+@media (max-width: 350px) {
+  .newsletter-section {
+    padding: 1.5rem 1rem;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-submit-newsletter,
+  .btn-newsletter {
+    width: 100%;
+  }
+}
+
+/* موبايل عمودي */
+@media (max-width: 600px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .btn-submit-newsletter {
+    width: 100%;
+  }
+}
+
+/* Landscape على الموبايل الصغير */
+@media (max-height: 480px) and (orientation: landscape) {
+  .newsletter-section {
+    padding: 1.2rem 1rem;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-submit-newsletter,
+  .btn-newsletter {
+    width: 100%;
+  }
+}

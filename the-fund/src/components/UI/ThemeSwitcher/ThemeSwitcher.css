@@ -1,0 +1,107 @@
+/* =========================
+   ThemeSwitcher.css (Themed - Responsive Buttons)
+========================= */
+
+/* Container - Desktop */
+.theme-container.inline {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px;
+  justify-items: start;
+  align-items: center;
+}
+
+/* RTL فقط للمحاذاة النصية */
+.theme-container.inline.rtl {
+  direction: rtl;
+}
+
+/* Buttons */
+.theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  border-radius: var(--border-radius, 10px);
+  background-color: var(--modal-bg);
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: auto;
+  min-width: 120px;
+  max-width: 160px;
+  transition: all 0.2s ease-in-out;
+  color: var(--primary-color); /* الاسم افتراضي برايمري */
+}
+
+/* Icon inside button (default) */
+.theme-icon {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  pointer-events: none;
+  color: var(--primary-color); /* الايقونة افتراضي برايمري */
+}
+
+/* Hover */
+.theme-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff; /* الاسم أبيض */
+  box-shadow: 0 0 6px var(--primary-color);
+}
+
+.theme-btn:hover .theme-icon {
+  color: #fff; /* الايقونة أبيض عند hover */
+}
+
+/* Active button */
+.theme-btn.active,
+.theme-btn:active {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff; /* الاسم أبيض */
+  box-shadow: 0 0 6px var(--primary-color);
+}
+
+.theme-btn.active .theme-icon,
+.theme-btn:active .theme-icon {
+  color: #fff; /* الايقونة أبيض */
+}
+
+/* Name inside button */
+.theme-name {
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  font-weight: 500;
+}
+
+/* =========================
+   Mobile Adjustments
+========================= */
+@media (max-width: 768px) {
+  .theme-container.inline {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 6px; /* قلل الفجوة */
+    justify-content: start;
+  }
+
+  .theme-container.inline.rtl {
+    direction: rtl;
+  }
+
+  .theme-btn {
+    padding: 4px 6px;
+    gap: 3px;
+    width: auto;
+    min-width: 90px;
+    max-width: 130px;
+    font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  }
+
+  .theme-icon {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+
+  .theme-name {
+    font-size: clamp(0.65rem, 1.2vw, 0.8rem);
+  }
+}

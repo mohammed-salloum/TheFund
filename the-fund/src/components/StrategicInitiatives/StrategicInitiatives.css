@@ -1,0 +1,133 @@
+:root {
+  --cards-per-slide: 4;
+}
+
+.initiatives-section {
+  font-family: "Cairo", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+ padding: clamp(2rem, 5vw, 4rem); /* متجاوب على كل الشاشات */
+}
+
+
+/* Header */
+.header-wrapper h2 {
+  letter-spacing: 1px;
+  font-size: clamp(1.4rem, 2.5vw, 2.6rem);
+  font-weight: bold;
+  color: var(--primary-color);
+    margin-bottom: 2.5rem;
+}
+.header-wrapper p,
+.initiatives-subtitle {
+  font-size: 18px;
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.btn-initiatives {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 12px 32px;
+  border-radius: 35px;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s ease;
+}
+.btn-initiatives:hover {
+  background: var(--button-hover);
+  transform: translateY(-3px);
+}
+
+/* Grid */
+.initiatives-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+/* Card */
+.initiative-card {
+  background: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 30px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(100% / var(--cards-per-slide) - 1rem);
+  min-width: 250px;
+  max-width: 400px;
+}
+.initiative-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 26px var(--card-shadow);
+}
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-react {
+  color: #fff;
+  font-size: 28px;
+}
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+.card-description {
+  font-size: 16px;
+  color: var(--text-color);
+  opacity: 0.85;
+  flex-grow: 1;
+}
+
+/* Carousel */
+.initiatives-carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.carousel-dots .dot.active {
+  background: var(--primary-color);
+}

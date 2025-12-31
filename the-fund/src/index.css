@@ -1,0 +1,130 @@
+/* =========== الحجم الأساسي =========== */
+html {
+  font-size: var(--main-font-size);
+}
+
+/* =========== اتجاه اللغة =========== */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* =========== المتغيرات العامة =========== */
+:root {
+  --main-font-ltr: 'Inter', sans-serif;
+  --main-font-rtl: 'Cairo', sans-serif;
+
+  --main-font-size-default: clamp(10px, 1.2vw, 12px);
+  --main-font-size: var(--main-font-size-default);
+
+  --bg-color: #fff;
+  --scroll-thumb: #bbb;
+  --scroll-track: #eee;
+}
+
+/* =========== تغيير الخط حسب اللغة =========== */
+html[dir="ltr"] body {
+  font-family: var(--main-font-ltr);
+}
+
+html[dir="rtl"] body {
+  font-family: var(--main-font-rtl);
+}
+
+/* =========================
+   Global Reset & Overflow Fix
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  background-color: var(--bg-color);
+}
+
+/* =========================
+   Text & Typography
+========================= */
+h1, h2, h3, h4, h5, h6,
+p, span, a, li {
+  font-weight: normal;
+  line-height: 1.5;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   Links & Buttons
+========================= */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* =========================
+   Images & Media
+========================= */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   Lists
+========================= */
+ul, ol {
+  list-style: none;
+}
+
+/* =========================
+   Scrollbar Styling
+========================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scroll-track);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+/* =========================
+   Specific Overrides
+========================= */
+.nav-content .arrow {
+  display: none !important;
+}

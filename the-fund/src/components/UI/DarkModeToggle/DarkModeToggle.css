@@ -1,0 +1,59 @@
+.dark-toggle-pro {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  color: var(--primary-color);
+}
+
+.dark-toggle-pro:hover:not(.disabled) {
+  background: var(--primary-color);
+    color: #fff;
+}
+
+.dark-toggle-pro.on {
+  background: var(--primary-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.dark-toggle-pro.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* أيقونات احترافية */
+.dark-icon, .light-icon {
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.dark-toggle-pro.off .light-icon {
+  opacity: 0.9;
+}
+
+/* خط الشطب الاحترافي */
+.slash {
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #d00;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* تأثير دوران خفيف عند التبديل */
+.dark-toggle-pro.on .dark-icon {
+  transform: rotate(-15deg);
+}
+.dark-toggle-pro.off .light-icon {
+  transform: rotate(10deg);
+}

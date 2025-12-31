@@ -1,0 +1,89 @@
+/* ==============================
+   📝 معلومات الاتصال
+============================== */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+.contact-subtitle {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+/* الأيقونات ترث اللون من الثيم */
+.icon-box {
+  width: clamp(24px, 4vw, 28px);
+  height: clamp(24px, 4vw, 28px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--icon-color);
+  color: #fff;
+  flex-shrink: 0;
+  font-size: clamp(12px, 1.5vw, 14px);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.icon-box:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* ترتيب العناصر */
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 2vw, 14px); /* فجوة ديناميكية */
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+/* نصوص وروابط */
+.contact-info .info-text,
+.contact-info .info-link {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.contact-info .info-link:hover {
+  text-decoration: underline;
+    color: var(--link-hover);  
+}
+
+/* الهاتف دائمًا LTR */
+.contact-info .info-link[href^="tel"] {
+  direction: ltr;
+}
+
+/* الاتجاه حسب اللغة */
+.rtl { direction: rtl; text-align: right; }
+.ltr { direction: ltr; text-align: left; }
+
+/* =========================
+   التجاوب الاحترافي
+========================= */
+@media (max-width: 1024px) {
+  .contact-info {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    margin-top: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-info {
+    margin-top: 0.8rem;
+  }
+}

@@ -1,0 +1,50 @@
+/* =========================
+   Font Switcher - Themed
+========================= */
+
+.fonts-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+   position: relative;
+  z-index: 9999; /* أي رقم كبير يكفي */
+}
+
+.font-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color)!important;        /* من الثيم */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color) !important;                 /* نص حسب الثيم */
+  font-weight: 600;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover - حسب الثيم */
+.font-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--sign-in-hover-text, #fff);
+  box-shadow: 0 0 6px var(--primary-color);
+}
+.font-btn:active {
+  transform: scale(0.95);
+}
+
+/* -------------------------
+   Mobile
+------------------------- */
+@media (max-width: 480px) {
+  .fonts-container { gap: 8px; }
+  .font-btn { width: 34px; height: 34px; font-size: 0.95rem; }
+}
+
+@media (max-width: 350px) {
+  .fonts-container { gap: 10px; }
+  .font-btn { width: 32px; height: 32px; font-size: 0.9rem; }
+}

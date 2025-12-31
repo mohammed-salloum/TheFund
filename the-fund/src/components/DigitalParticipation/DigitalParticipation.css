@@ -1,0 +1,224 @@
+/* =======================
+   Background
+======================= */
+.digital-section {
+  background: var(--bg-color);
+  padding: 25px 0;
+  position: relative;
+}
+
+/* =======================
+   Title
+======================= */
+.digital-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* =======================
+   Tabs Wrapper
+======================= */
+.digital-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 35px;
+  color: var(--primary-color);
+   font-weight: 600;
+  flex-wrap: wrap;
+  padding-inline: 20px; /* يمنع الالتصاق بالحواف */
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+/* =======================
+   Tab Button
+======================= */
+.digital-tab {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  width: 180px;              /* توحيد الحجم */
+  max-width: 100%;
+  padding: 12px 0;
+  border-radius: 50px;
+  font-size: 16px;
+  color: var(--primary-color);
+  transition: 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
+/* Active Tab */
+.digital-tab.active {
+  background: var(--primary-color);
+  color: var(--button-text);
+  border-color: var(--primary-color);
+}
+
+
+/* =======================
+   White Box
+======================= */
+.digital-box {
+  border-radius: 22px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* =======================
+   Coming Soon
+======================= */
+.digital-coming-soon {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+/* =======================
+   Form
+======================= */
+.suggestions-form {
+  border: 2px solid var(--primary-color);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.digital-form label {
+  display: block;
+  color: var(--primary-color);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.digital-form input,
+.digital-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  outline: none;
+  font-size: 14px;
+}
+
+.digital-form textarea {
+  resize: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.form-row.full {
+  flex-direction: column;
+}
+
+.form-col {
+  flex: 1;
+}
+
+/* =======================
+   Submit Button
+======================= */
+.submit-center {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.digital-submit {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 12px 50px;
+  border-radius: 40px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.digital-submit:hover {
+  background: var(--button-hover);
+}
+
+/* =======================
+   Responsive
+======================= */
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+  .digital-tabs {
+    gap: 8px;              /* تقليل الفجوة بين التابس */
+  }
+
+  .digital-tab {
+    width: 100%;
+    max-width: 170px;      /* أصغر من 200 */
+    padding: 8px 0;        /* تقليل ارتفاع التاب */
+    font-size: 12px;
+  }
+
+  .digital-box {
+    padding: 25px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+/* Between 481px and 519px */
+@media (max-width: 519px) and (min-width: 481px) {
+  .digital-tabs {
+    flex-wrap: nowrap;  /* منع الالتفاف */
+    justify-content: center; /* توسيط */
+  }
+
+  .digital-tab {
+    width: 140px; /* صغر حجم التاب شوي */
+    font-size: 13px; /* تقليل الخط إذا لازم */
+    padding: 8px 0;
+  }
+}
+
+
+/* Small Mobile (480px - 350px) */
+@media (max-width: 480px) {
+  .digital-tabs {
+    flex-direction: column;   /* تحت بعض */
+    gap: 10px;
+    padding-inline: 16px;
+    align-items: center;      /* توسيط */
+  }
+
+  .digital-tab {
+    width: 100%;
+    max-width: 220px;         /* نفس الحجم لكل التابس */
+    font-size: 13px;
+    min-height: 44px;
+  }
+}
+
+
+
+/* Landscape Mode */
+@media (max-width: 900px) and (orientation: landscape) {
+  .digital-tabs {
+    flex-wrap: nowrap;
+  }
+
+  .digital-tab {
+    width: 180px;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}

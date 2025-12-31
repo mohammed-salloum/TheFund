@@ -1,0 +1,54 @@
+:root {
+  --navbar-height: 60px;
+}
+.faq-container {
+  max-width: 800px;
+  padding: clamp(2rem, 5vw, 4rem); /* متجاوب على كل الشاشات */
+  margin: 0 auto; /* <-- هذه مهمة لتوسيط الحاوية */
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-title {
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+ font-size: clamp(1.4rem, 2.5vw, 2.6rem);
+}
+
+
+/* تابلت */
+@media (max-width: 1024px) {
+  .faq-container {
+    margin: 1.8rem auto 1.5rem auto; /* أقل قليلًا من الديسكتوب */
+    padding: 1.8rem;
+  }
+}
+
+/* موبايل عمودي */
+@media (max-width: 768px) {
+  .faq-container {
+    margin: 1.5rem auto 1.2rem auto;
+    padding: 1.5rem;
+  }
+}
+
+/* موبايل صغير جدًا */
+@media (max-width: 480px) {
+  .faq-container {
+    margin: 1.2rem auto 1rem auto; /* مسافة جيدة بدون الالتصاق */
+    padding: 1rem;
+  }
+}
+
+/* Landscape على الموبايل الصغير */
+@media (max-height: 480px) and (orientation: landscape) {
+  .faq-container {
+    margin: 1rem auto 1rem auto;
+    padding: 0.8rem;
+  }
+}

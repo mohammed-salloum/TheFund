@@ -1,0 +1,165 @@
+/* =========================
+   قاعدة عامة لكل الأزرار (متوافقة مع كل الثيمات)
+========================= */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-default, 6px);
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 600;
+  border-radius: var(--border-radius, 6px);
+  cursor: pointer;
+  transition: all var(--transition-default, 0.3s) ease;
+  box-sizing: border-box;
+
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 1px solid transparent;
+
+  min-width: 140px;  /* الحد الأدنى للعرض */
+  height: 40px;      /* ارتفاع ثابت */
+  padding: 0 1rem;
+}
+
+/* المحتوى الداخلي داخل الزر */
+.btn span, 
+.btn-quantity span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover / Active / Focus / Disabled */
+/* Hover / Active / Focus / Disabled */
+.btn:hover:not(.disabled),
+.btn-quantity:hover:not(.disabled) {
+  background-color: var(--primary-hover); /* يستخدم المتغير الخاص بالثيم */
+  color: var(--sign-in-hover-text) !important;    /* نص أبيض دائمًا عند hover */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.btn:active,
+.btn-quantity:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn:focus-visible,
+.btn-quantity:focus-visible {
+  outline: 2px solid var(--accent-color); /* يبقى ثابت */
+  outline-offset: 2px;
+}
+
+.btn.disabled,
+.btn:disabled,
+.btn-quantity.disabled,
+.btn-quantity:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================
+   Full width (يتم استخدامه بحذر)
+========================= */
+.btn.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =========================
+   زر الكمية (+/-)
+========================= */
+.btn-quantity {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+}
+
+/* =========================
+   مربّع الكمية
+========================= */
+.quantity-wrapper input[type="number"] {
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  color: var(--input-text);
+}
+
+/* إزالة أسهم الـ number input */
+.quantity-wrapper input::-webkit-outer-spin-button,
+.quantity-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =========================
+   مسافة موحدة بين الأيقونة والنص في جميع الأزرار
+========================= */
+/* مسافة موحدة بين الأيقونة والنص لجميع الأزرار */
+.btn svg,
+.btn i {
+  margin-right: 6px; /* افتراضي LTR */
+  flex-shrink: 0;    /* منع تصغير الأيقونة */
+}
+
+/* إذا الموقع RTL، قلب المسافة */
+.rtl .btn svg,
+.rtl .btn i {
+  margin-right: 0;
+  margin-left: 6px;
+}
+
+/* =========================
+   Responsive لجميع الشاشات الصغيرة
+========================= */
+@media (max-width: 1024px) {
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.55rem 0.8rem;
+    height: 38px;
+  }
+  .btn-quantity {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px), (max-height: 500px) and (orientation: landscape) {
+  .btn {
+    font-size: 0.9rem;
+    height: 36px;
+    padding: 0.5rem 0.6rem;
+  }
+  .btn-quantity {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    font-size: 0.9rem;
+    height: 36px;
+    padding: 0.45rem 0.5rem;
+  }
+  .btn-quantity {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+}

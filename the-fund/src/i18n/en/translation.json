@@ -1,0 +1,407 @@
+{
+"titles": {
+  "home": "Home | The Fund",
+  "about": "About Us | The Fund",
+  "services": "Services | The Fund",
+"initiatives": "Strategic Initiatives | The Fund",
+  "contact": "Contact Us | The Fund",
+
+"newsletter": "Newsletter Subscription | The Fund",
+  "faq": "FAQ | The Fund",
+
+  "login": "Login | The Fund",
+  "register": "Register | The Fund",
+  "resetPassword": "Reset Password | The Fund",
+
+  "settings": "Settings | The Fund",
+  "search": "Search | The Fund",
+  "sitemap": "Site Map | The Fund",
+
+  "notFound": "Page Not Found | The Fund"
+}
+
+,
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "media": "Media Center",
+    "partners": "Partners",
+    "initiatives": "Strategic Initiatives",
+    "contact": "Contact Us",
+    "lang_ar": "Arabic",
+    "lang_en": "English",
+    "sitemap": "Site Map",
+    "settings": "Settings",
+    "login": "Login",
+    "search": "Search",
+   "goHome": "Go to homepage"
+  },
+  "settings": {
+    "title": "Settings",
+    "darkDisabled": "Dark mode is disabled for Colorblind theme",
+    "enableDark": "Enable Dark Mode",
+    "disableDark": "Disable Dark Mode",
+    "fontSize": "Font Size",
+    "themes": "Themes",
+    "darkMode": "Dark Mode"
+  },
+
+  "themes": {
+    "default": "Default",
+    "evergreen": "Evergreen",
+    "colorblind": "Colorblind",
+    "reading": "Reading"
+  },
+    "search": {
+    "title": "Search",
+    "placeholder": "Type to search...",
+    "close": "Close"
+  },
+  "siteMap": {
+  "title": "Site Map",
+
+  "links": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "mediaCenter": "Media Center",
+    "partners": "Partners",
+    "initiatives": "Initiatives",
+    "contact": "Contact Us",
+
+    "newsletter": "Newsletter Subscription",
+    "faqs": "FAQs",
+    "initiativesShort": "Initiatives"
+  }
+},
+"LogIn": {
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "loginBtn": "Log in",
+    "resetPassword": "Reset Password",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create Account",
+    "messages": {
+      "wrongCredentials": "Invalid email or password",
+      "emailRequired": "Please enter your email",
+      "passwordRequired": "Please enter your password",
+      "invalidEmail": "Please enter a valid email"
+    }
+  },
+
+  "register": {
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "registerBtn": "Register",
+    "backToLogin": "Back to Login",
+    "messages": {
+      "registerSuccess": "Account created successfully. You can now log in",
+      "emailExists": "An account with this email already exists",
+      "nameRequired": "Please enter your full name",
+      "nameInvalid": "The name must contain 2–4 words, each at least 3 letters, letters only",
+      "nameDoubleSpaces": "Please avoid using consecutive spaces, a single space between words is enough",
+      "max50Chars": "The name must not exceed 50 characters",
+      "emailRequired": "Please enter your email address",
+      "invalidEmail": "Please enter a valid email address",
+      "passwordRequired": "Please enter your password",
+      "passwordWeak": "The password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordsNotMatch": "Passwords do not match"
+    }
+  },
+
+  "reset": {
+    "yourEmail": "Your Email",
+    "email": "Email",
+    "resetBtn": "Reset Password",
+    "backToLogin": "Back to Login",
+    "messages": {
+      "resetSent": "We've sent a password reset link to your email",
+      "noAccount": "No account found with this email",
+      "emailRequired": "Please enter your email"
+    }
+  },
+
+  "loading": "Loading..."
+},
+"hero": {
+  "altText": "City skyline background",
+
+  "slides": [
+    {
+      "title1": "Your Idea Could Be Bigger",
+      "title2": "A Leading Vision in the UAE",
+      "subtitle": "We don't just provide funding — we help build a new generation of entrepreneurs"
+    },
+    {
+      "title1": "Innovative Funding",
+      "title2": "Tailored to Your Project",
+      "subtitle": "Get the right financing in just a few simple steps"
+    },
+    {
+      "title1": "Your Partners in Success",
+      "title2": "From Idea to Execution",
+      "subtitle": "We offer guidance, expertise, and full support"
+    }
+  ],
+
+  "scroll": "Scroll Down"
+},
+"servicesGuide": {
+  "guideTitle": "Services Guide",
+  "financeRequests": "Finance Requests",
+  "postFinance": "Post-Finance Services",
+  "comingSoon": "This section will be added later",
+
+  "consultationForFinance": "Financial Consultation Request for Funding",
+  "establishmentLoan": "Establishment Loan Request",
+  "creditLoan": "Credit Loan Request",
+  "invoicePurchaseLoan": "Invoice and Purchase Orders Loan Request",
+  "assetFinanceLoan": "Asset Finance Loan Request",
+  "shortTermLoan": "Short-Term Finance Loan Request",
+  "expansionLoan": "Expansion Loan Request",
+  "crowdFundingGuarantee": "Crowdfunding Guarantee Request",
+
+  "apply": "Apply",
+  "details": "Details"
+}
+,
+"digital": {
+  "title": "Digital Participation",
+  "tabs": {
+   "suggestions": "Suggestions",
+    "surveys": "Surveys",
+    "opinions": "Opinion Polls"
+  },
+  "comingSoon": "This section will be added later",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "message": "Message",
+    "send": "Send"
+  }
+}
+  ,
+  "about": {
+        "title": "About Us",
+    "description": "The Mohammed bin Rashid Fund aims to finance innovative entrepreneurial projects for Emirati entrepreneurs—owners of small and medium enterprises—who provide comprehensive study, proper preparation, and expansion in the field of entrepreneurship.",
+    "subtitle": "Our goal is not just to provide money but to prepare a new generation of entrepreneurs.",
+    "storyButton": "View Our Story",
+
+    "missionTitle": "Mission",
+    "missionDesc": "Supporting investment and encouraging innovation.\nOur goal is not just to provide money,\nbut to prepare a generation of entrepreneurs.",
+
+    "visionTitle": "Vision",
+    "visionDesc": "Investing in small and medium enterprises\nand preparing a generation of local Emirati investors."
+  },
+  "media": {
+    "title": "Media Center",
+    "tabs": {
+      "news": "Latest News",
+      "images": "Images",
+      "video": "Videos"
+    },
+    "comingSoon": "This section will be added later",
+
+    "items": {
+    "1": "Emirates Islamic Bank agrees to finance 80% of the Fund's projects",
+      "2": "The Fund signs an MoU with Emirates Islamic Bank",
+      "3": "Signing an MoU with ADNEC to support SMEs",
+      "details": "Details",
+      "back": "Back"
+    },
+"descriptions": {
+  "1": "This agreement empowers entrepreneurs by providing financing that covers a significant portion of their setup and operational costs, enabling them to expand more confidently and develop their products and services. It also offers a comprehensive support system that includes training, follow-up, and mentorship—ultimately improving the success rate of entrepreneurial ventures and boosting their contribution to the local economy.",
+  "2": "The Memorandum of Understanding with Emirates Islamic aims to expand financing options available for entrepreneurs by providing seamless and efficient banking services powered by innovative digital solutions. The agreement includes flexible financing programs tailored to the needs of business owners, along with expert financial advisory services that help them manage their projects more effectively and enhance their growth and sustainability.",
+  "3": "This collaboration with ADNEC aims to support the growth of small and medium enterprises by launching joint initiatives that offer specialized support programs, innovative exhibition spaces for entrepreneurs, and training workshops designed to enhance their readiness for market entry. The partnership also focuses on building strong networking channels between business owners and investors, driving innovation and strengthening the national economic ecosystem." 
+}
+
+  },
+  "partners": {
+    "title": "Partners"
+  },
+   "services": {
+    "search": "Search",
+    "menu": {
+      "projectsSupport": "Projects & Support",
+      "dashboard": "Dashboard",
+      "projects": "Projects",
+      "customerService": "Customer Service",
+      "settings": "Settings",
+      "reports": "Reports",
+      "agenda": "Agenda",
+      "receivables": "Project Receivables",
+      "payments": "Project Payments"
+    },
+    "stats": {
+      "all": "All",
+      "new": "New",
+      "pendingApproval": "Pending Approval",
+      "disbursement": "Disbursement",
+      "payable": "Payable",
+      "rejected": "Rejected"
+    },
+    "filters": {
+"requestNumber": "Request Number",
+"date": "Received Date",
+"status": "Request Status",
+"type": "Request Type"
+
+    },
+    "buttons": {
+      "search": "Search"
+    },
+    "card": {
+      "applicant": "Applicant Name",
+      "status": "Under Review",
+      "totalAmount": "Total Amount"
+    }
+  },
+"initiatives": {
+  "title": "Strategic Initiatives",
+  "subtitle": "Driving transformation through impactful initiatives that support progress and innovation.",
+  "exploreButton": "Explore Initiatives",
+
+  "card1Title": "Strategic Planning",
+  "card1Desc": "Developing modern strategies that align with global transformations.",
+
+  "card2Title": "Execution & Performance",
+  "card2Desc": "Implementing initiatives with high efficiency and measurable results.",
+
+  "card3Title": "Continuous Improvement",
+  "card3Desc": "Enhancing operational processes to ensure sustainable development.",
+
+  "card4Title": "Innovation & Partnerships",
+  "card4Desc": "Building innovative solutions through collaboration and strategic partnerships."
+}
+,
+  "contact": {
+  "title": "Contact us",
+  "subtitle1": "Contact us about anything related to our company or services.",
+  "subtitle2": "We'll do our best to get back to you as soon as possible.",
+"form": {
+  "nameLabel": "Name",
+  "namePlaceholder": "Your full name",
+  "phoneLabel": "Phone Number",
+  "phonePlaceholder": "Your phone number",
+  "emailLabel": "Email",
+  "emailPlaceholder": "EX: example@example.com",
+  "companyLabel": "Company",
+  "companyPlaceholder": "Your company name",
+  "subjectLabel": "Subject",
+  "subjectPlaceholder": "Enter the subject",
+  "questionLabel": "Question",
+  "questionPlaceholder": "Write your question here...",
+
+"nameRequired": "Please enter your full name",
+"nameInvalid": "The name must contain 2–4 words, each word at least 3 letters, letters only",
+"nameDoubleSpaces": "Please do not use consecutive spaces; a single space between words is sufficient",
+"max50Chars": "The name must not exceed 50 characters",
+
+"phoneInvalid": "Please enter a valid phone number",
+"phonePrefixError": "Please enter a valid phone number starting with a correct prefix of Syriatel or MTN",
+  
+  "emailRequired": "Email is required",
+"invalidEmail": "Please enter a valid email address",
+
+"companyInvalid": "Please enter a valid company name",
+"companyMin3Chars": "Company name must be at least 3 characters",
+"companyDoubleSpaces": "Please do not use consecutive spaces; a single space between words is sufficient",
+"companyMax50Chars": "Company name must not exceed 50 characters",
+
+ "subjectRequired": "Please enter the subject",
+"subjectInvalid": "Please enter a valid subject; it must not consist only of numbers, symbols, or punctuation marks",
+"subjectDoubleSpaces": "Please do not use consecutive spaces; a single space between words is sufficient",
+"subjectMin3Chars": "Subject must be at least 3 characters",
+"subjectMax100Chars": "Subject must not exceed 100 characters",
+
+"questionRequired": "Please enter your question",
+"questionInvalid":"Please enter a valid question; it must not consist only of numbers, symbols, or punctuation marks",
+"questionDoubleSpaces": "Please do not use consecutive spaces; a single space between words is sufficient",
+"questionMin3Chars": "Question must be at least 3 characters",
+"questionMax500Chars": "Question must not exceed 500 characters",
+
+  "submitButton": "Submit",
+  "sending": "Sending",
+  "successMessage": "✅ Thank you! Your message has been sent successfully",
+"errorMessage": "❌ Please fill in all required fields and complete the form correctly"
+
+},
+  "info": {
+   "companyName": "Mohammed Bin Rashid Fund for SMEs",
+    "address": "United Arab Emirates – Dubai",
+    "email": "info@thefund.ae",
+    "phone": "+971 4 361 3000"
+  },
+"map": {
+  "labelDefault": "My location in Dubai",
+  "labelWithName": "Map of {{label}}",
+  "titleDefault": "Dubai Map",
+  "titleWithName": "Map — {{label}}"
+}
+}
+  ,
+"footer": {
+  "sitemap": "Sitemap",
+  "newsletter": "Subscribe to Newsletter",
+  "faq": "Frequently Asked Questions",
+  "initiatives": "Strategic Initiatives",
+  "contactUs": "Contact Us",
+
+  "addressFull": "Building A, 2nd Floor — Near Clock Roundabout, Dubai, United Arab Emirates",
+  "email": "info@thefund.ae",
+  "phone": "+971 4 361 3000",
+  "callCenter": "Call Center: 80070",
+
+  "disclaimer": "Disclaimer",
+  "copyrightStatement": "Copyright Statement",
+  "privacyPolicy": "Privacy Policy",
+  "terms": "Terms & Conditions",
+  "uaeFuturePromise": "UAE Government Future Services Promise",
+
+  "screenNote": "For optimal viewing, use screen resolution 1280x1024 or higher. Recommended browsers: Internet Explorer +10, Firefox 25.0+, Safari 5.1+, Chrome 39.0+",
+
+  "lastUpdate": "Last website update on",
+  "lastUpdateDate": "11/04/2022",
+
+  "visitorsCount": "Visitors Count:",
+  "visitorsNumber": "3,513,665",
+
+  "rightsReserved": "All rights reserved © 2022 The Fund",
+  "fundName": "Mohammed bin Rashid Fund for SME Development",
+      "goHome": "Go to homepage"
+}
+,
+  "newsletter": {
+    "title": "Subscribe to Newsletter",
+    "subtitle": "Subscribe to receive updates about initiatives and services.",
+    "subscribeButton": "Subscribe Now",
+    "emailPlaceholder": "Enter your email address",
+    "submit": "Submit"
+  },
+"faq": {
+  "title": "Frequently Asked Questions",
+  "subtitle": "Answers to the most commonly asked questions.",
+  
+  "items": [
+    {
+      "question": "How can I apply for services?",
+      "answer": "You can apply through the platform using your user account."
+    },
+    {
+      "question": "Is technical support available?",
+      "answer": "Yes, technical support is available 24/7."
+    },
+    {
+      "question": "Is the subscription free?",
+      "answer": "Yes, all basic services are free."
+    }
+  ]
+}
+
+}

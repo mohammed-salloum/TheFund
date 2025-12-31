@@ -1,0 +1,175 @@
+
+/* العناوين الفرعية داخل الفورم */
+.contact-form-subtitle {
+  font-size: clamp(0.9rem, 0.5vw + 0.85rem, 1rem);
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+/* حاوية الفورم */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 12px; /* يحمي من الالتصاق بالحواف */
+  box-sizing: border-box;
+}
+
+
+.contact-form-subtitle:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* رسائل الخطأ والنجاح */
+.form-message-below {
+  margin-top: 0.6rem;
+  min-height: 1.4rem;
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form-message-below.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-message-below.fade-out {
+  opacity: 0;
+  transform: translateY(-3px);
+}
+
+.form-error,
+.form-success {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 0.4vw + 0.75rem, 0.9rem);
+  display: block;               /* بدل inline-block */
+  line-height: 1.4;
+  border: 1px solid transparent;
+  white-space: normal;          /* يسمح بكسر السطر */
+  overflow-wrap: break-word;    /* يكسر الكلمات الطويلة إذا لزم */
+  width: 100%;                  /* عرض كامل */
+}
+
+.form-error {
+  color: var(--form-error-text);
+  background-color: var(--form-error-bg);
+  border-color: var(--form-error-border);
+}
+
+.form-success {
+  color: var(--form-success-text);
+  background-color: var(--form-success-bg);
+  border-color: var(--form-success-border);
+}
+
+/* =============================
+   زر Submit
+============================= */
+.form-field-wrapper.submit-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.form-field-wrapper.submit-wrapper label {
+  flex: 0 0 110px; /* نفس عرض اللابل */
+  width: 110px;
+}
+
+.form-field-wrapper.submit-wrapper .field-wrapper {
+  display: inline-flex; /* على قدر النص */
+  flex: none;           /* لا تتمدد */
+  width: auto;          /* على قدر النص */
+}
+
+/* الزر نفسه */
+.form-field-wrapper.submit-wrapper .btn-inline {
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+}
+
+.btn-inline {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.btn-inline:disabled {
+  color: #fff; /* نص ثابت حتى عند disabled */
+  background-color: var(--accent-color);
+  cursor: not-allowed;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.btn-inline:focus,
+.btn-inline:active,
+.btn-inline:hover {
+  color: #fff; /* نص ثابت حتى عند disabled */
+  background-color: var(--priamry-color); /* يبقى ثابت */
+  outline: none;
+  box-shadow: none;
+}
+
+
+.dots span {
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+.dots span:nth-child(1) { animation-delay: 0s; }
+.dots span:nth-child(2) { animation-delay: 0.2s; }
+.dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+/* =============================
+   الشاشات الصغيرة
+============================= */
+@media (max-width: 480px) {
+  .form-field-wrapper.submit-wrapper {
+    flex-direction: column; /* اللابل فوق الحقل */
+    align-items: flex-start; /* يبدأ من نفس جهة الحقل */
+    margin-bottom: 0.5rem;
+  }
+
+  .form-field-wrapper.submit-wrapper label {
+       display: none; /* يخفي label الفارغ */
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-field-wrapper.submit-wrapper .field-wrapper {
+    width: auto;          /* فقط على قدر الزر */
+    display: inline-flex; 
+    justify-content: flex-start; /* LTR على اليسار */
+  }
+
+  .rtl .form-field-wrapper.submit-wrapper .field-wrapper {
+    justify-content: flex-end; /* RTL على اليمين */
+  }
+}

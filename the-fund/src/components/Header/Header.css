@@ -1,0 +1,653 @@
+/* === Header.css === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+  
+}
+
+/* Top Section */
+.header-top {
+  padding: 25px 0;
+  width: 100%;
+}
+
+.top-container {
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 130px;
+}
+
+.fund-img,
+.dubai-img {
+  max-height: 70px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+.header-logo-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* نص التوليب فوق اللوغو */
+.header-tooltip-text {
+  position: absolute;
+  bottom: 100%;           /* فوق اللوغو مباشرة */
+  left: 50%;              /* مركز أفقياً */
+  transform: translateX(-50%) translateY(-1px); /* تقريب أكثر للوغو */
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 20;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header-logo-tooltip:hover .header-tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-1px);
+  }
+}
+
+
+/* إخفاء التوليب على الموبايل */
+@media (hover: none) {
+  .header-tooltip-text {
+    display: none;
+  }
+}
+
+
+
+/* Wrapper for nav + utility */
+.nav-utility-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+/* Navigation */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  background:var(--primary-color);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  gap: 2rem; /* 50px */
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 10px 18px;
+  color: #fff;
+  font-size: 1rem; /* 15px */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  background: var(--navbar-hover, rgba(255, 255, 255, 0.15));
+}
+
+/* Utility Toolbar */
+.utility-toolbar {
+  display: flex;
+  justify-content: center;
+  background: var(--accent-color);
+  padding: 6px 12px;
+  border-radius: 0 0 15px 15px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.utility-item {
+  background: none;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem; /* 14px */
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.utility-item:hover {
+  background: var(--navbar-hover, rgba(255, 255, 255, 0.18));
+}
+
+/*   Hamburger     */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+   color: #fff;
+  cursor: pointer;
+}
+
+.nav-menu .close-btn {
+  display: none;
+}
+.header-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  inset: 0;
+  min-height: 100%; /* fallback */
+  background: rgba(0,0,0,0.45);
+  z-index: 1050;
+}
+
+
+/* Language Dropdown */
+/* حاوية الدروب داون */
+.lang-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* صندوق الدروب داون */
+.lang-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* قللنا الحواف */
+  padding: 4px 0;     /* قللنا الفجوة الداخلية */
+  width: 120px;       /* عرض مناسب للأعلام */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+  animation: fadeIn 0.15s ease-in-out;
+}
+/* أزرار اللغة داخل القائمة */
+.lang-dropdown button {
+  width: 100%;
+  padding: 5px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; /* 🔥 مسافة أكبر بين العلم والنص */
+}
+
+/* عند تمرير الماوس */
+.lang-dropdown button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* 🔥 ضبط حجم الأعلام */
+/* حجم الأعلام داخل الدروب داون */
+.lang-dropdown .lang-flag {
+  width: 22px;
+  height: auto;
+  border-radius: 3px;
+  object-fit: contain;
+}
+
+/* زر اللغة الأساسي */
+.lang-btn {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================= */
+/*      RESPONSIVE DESIGN        */
+/* ============================= */
+
+@media (max-width: 1350px) {
+  .top-container {
+    padding: 0 100px;
+  }
+    .fund-img,
+  .dubai-img {
+    height: 60px;
+  }
+
+  .nav-menu {
+    gap: 1rem; /* 35px */
+    margin: 0 40px;  
+  }
+    .nav-menu li a {
+    font-size: 0.9rem; /* 14px */
+    padding: 10px 25px;
+  }
+
+}
+@media (max-width: 1200px) {
+  .top-container {
+    padding: 0 80px;
+  }
+  .nav-menu {
+    gap: 0.5rem; /* 35px */
+    margin: 0 40px;  
+  }
+    .nav-menu li a {
+    font-size: 0.8rem; /* 14px */
+    padding: 10px 20px;
+  }
+
+}
+@media (max-width: 992px) {
+  .top-container {
+    padding: 0 50px;
+  }
+    .fund-img,
+  .dubai-img {
+    height: 50px;
+  }
+  .nav-menu li a {
+    font-size: 0.6rem; /* 14px */
+    padding: 10px 12px;
+  }
+
+  .nav-menu {
+    gap: 0.8rem;
+   margin: 0 10px;   /* 25px */
+  }
+      .utility-toolbar {
+    padding: 4px 8px;       /* تقليل البادينغ */
+    gap: 2px;               /* تقليل المسافة بين الأزرار */
+  }
+
+  .utility-item {
+    font-size: 0.7rem;     /* تصغير حجم النص */
+    padding: 4px 8px;       /* تصغير padding داخلي لكل زر */
+    gap: 1px;               /* تقليل المسافة بين الأيقونة والنص */
+  }
+
+  .utility-item span {
+    font-size: 0.6rem;      /* تصغير حجم الاسم للنصوص */
+  }
+}
+
+/* ============================= */
+/*         TABLET & DOWN         */
+/* ============================= */
+@media (max-width: 768px) {
+    .top-container {
+    padding: 0 20px;
+  }
+
+      .fund-img,
+  .dubai-img {
+    height: 40px;
+  }
+.nav-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  border-radius: 0; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  gap: 2rem;
+  z-index: 1100;        /* فوق overlay */
+  transform: translateX(var(--menu-translate, 100%));
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+  overflow-y: auto;     /* scroll داخلي فقط */
+}
+
+/* عند فتح القائمة */
+.nav-menu.open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+html[dir="ltr"] .nav-menu { --menu-translate: 100%; }
+html[dir="rtl"] .nav-menu { --menu-translate: -100%; }
+
+
+/* منع أي حركة مفاجئة عند تغيير dir */
+html[dir="rtl"] .nav-menu:not(.open),
+html[dir="ltr"] .nav-menu:not(.open) {
+  transition: none;
+}
+
+/* ========================= */
+/* Hamburger Button */
+.hamburger-btn {
+  display: flex;
+  position: relative;
+}
+
+/* ========================= */
+/* Overlay */
+.header-overlay {
+  position: fixed;
+  inset: 0;                  /* يغطي الشاشة بالكامل */
+  width: 100vw;
+  background: rgba(0,0,0,0.45);
+  z-index: 1050;             /* تحت nav-menu */
+}
+
+/* ========================= */
+/* Close Button */
+  .nav-menu .close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    font-size: 1.5rem; 
+   color: #fff;
+    border: none;
+
+    cursor: pointer;
+    z-index: 1200;
+  }
+
+html[dir="ltr"] .nav-menu .close-btn {
+  right: 20px;
+}
+html[dir="rtl"] .nav-menu .close-btn {
+  left: 20px;
+  right: auto;
+}
+  /* ========================= */
+  /* Links */
+  /* ========================= */
+  .nav-menu li a {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
+  /* ========================= */
+  /* Utility Toolbar */
+  /* ========================= */
+  .nav-utility-wrapper {
+    width: 100%;           /* امتداد كامل الحاوية */
+    padding: 0 16px;       /* مسافة جانبية من اليمين واليسار */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* يمكن تغييرها space-between إذا تحب */
+  }
+
+  .utility-toolbar {
+    width: 100%;            /* يمتلئ داخل الحاوية مع البادينغ */
+    padding: 6px 8px;      /* يمكن تعديل المسافة الداخلية */
+    border-radius: 15px;
+  background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+  }
+
+
+.utility-item {
+  font-size: 0.7rem;
+  padding: 6px 8px; /* padding داخلي مناسب */
+  width: auto;       /* عوضاً عن min-width ثابت */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+.utility-icon {
+  display: none; /* تخفي الأيقونة فقط */
+}
+
+}
+
+
+/* ============================= */
+/*        MOBILE SMALL           */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+  .top-container {
+    padding: 0 10px;
+  }
+  .nav-menu {
+    gap: 6px;
+  }
+
+  .nav-menu li a {
+    padding: 8px 14px;
+    font-size: 0.6875rem; /* 11px */
+  }
+
+  .nav-utility-wrapper {
+    width: 100%;
+    padding: 0 12px; /* أقل من 768px لتناسب الشاشة الصغيرة */
+  }
+
+  .utility-toolbar {
+    width: 100%;
+    padding: 5px 10px;
+  }
+    .utility-toolbar svg {
+    display: inline-block; /* عرض الأيقونات دائماً */
+  }
+
+ .utility-toolbar span {
+display: none;
+  }
+
+}
+
+/* ============================= */
+/*        MOBILE XS              */
+/* ============================= */
+
+@media (max-width: 350px) {
+
+  .fund-img,
+  .dubai-img {
+    height: 35px;
+  }
+
+  .nav-menu li a {
+    padding: 6px 12px;
+    font-size: 0.625rem; /* 10px */
+  }
+
+  .nav-utility-wrapper {
+    width: 100%;
+    padding: 0 8px; /* مسافة جانبية صغيرة جدًا */
+  }
+
+  .utility-toolbar {
+    width: 100%;
+    padding: 4px 8px;
+  }
+
+  .utility-item {
+    font-size: 0.625rem;
+    padding: 4px;
+  }
+}
+
+/* ============================= */
+/*     LANDSCAPE MOBILE          */
+/* ============================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+  .top-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+
+  .nav-menu {
+    gap: 8px;
+  }
+
+  .nav-menu li a {
+    padding: 7px 14px;
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .utility-toolbar {
+    padding: 4px 10px;
+  }
+}
+
+/* Tablets & Mobile */
+@media (max-width: 768px) {
+  html[dir="ltr"] .lang-dropdown {
+    right: auto;        /* تجاهل الـ right */
+    left: 16px;         /* مسافة من الحافة اليسرى */
+  }
+  html[dir="rtl"] .lang-dropdown {
+    left: auto;         /* تجاهل الـ left */
+    right: 16px;        /* مسافة من الحافة اليمنى */
+  }
+}
+
+/* Small Mobile ≤ 480px */
+@media (max-width: 480px) {
+  html[dir="ltr"] .lang-dropdown {
+    left: 12px;
+  }
+  html[dir="rtl"] .lang-dropdown {
+    right: 12px;
+  }
+}
+
+/* Extra Small Mobile ≤ 350px */
+@media (max-width: 350px) {
+  html[dir="ltr"] .lang-dropdown {
+    left: 8px;
+  }
+  html[dir="rtl"] .lang-dropdown {
+    right: 8px;
+  }
+}
+
+/* ============================= */
+/*     MOBILE LANDSCAPE ≤ 768px  */
+/* ============================= */
+@media (max-width: 768px) and (orientation: landscape) {
+
+  .top-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+
+  .nav-menu {
+    gap: 8px;
+  }
+
+  .nav-menu li a {
+    padding: 7px 14px;
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .utility-toolbar {
+    padding: 4px 10px;
+  }
+
+  /* عرض النص بجانب الأيقونة للعرض الأكبر من 500px */
+  @media (min-width: 501px) {
+    .utility-toolbar span {
+      display: inline; /* إظهار الاسم */
+    }
+    .utility-toolbar svg {
+      display: inline-block; /* عرض الأيقونات */
+    }
+  }
+
+  /* عرض الأيقونات فقط للعرض ≤ 500px */
+  @media (max-width: 500px) {
+    .utility-toolbar span {
+      display: none; /* إخفاء الاسم */
+    }
+    .utility-toolbar svg {
+      display: inline-block; /* عرض الأيقونات فقط */
+    }
+  }
+}
+
+/* ============================= */
+/*   MOBILE ≤ 480px (Two Rows)   */
+/* ============================= */
+@media (max-width: 480px) {
+
+  .utility-toolbar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* عندك 6 أزرار */
+    row-gap: 4px;
+    column-gap: 6px;
+    justify-items: center;
+    align-items: center;
+    padding: 8px 6px;
+  }
+
+  .utility-item {
+    flex-direction: column;
+    gap: 2px;
+    padding: 4px 0;
+  }
+
+  .utility-item svg {
+    display: block;
+    font-size: 18px;
+  }
+
+  .utility-item span {
+    display: block;           /* إظهار الاسم */
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* الهامبرغر بدون اسم */
+  .hamburger-btn span {
+    display: none;
+  }
+}

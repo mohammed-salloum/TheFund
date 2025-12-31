@@ -1,0 +1,247 @@
+/* ===== SECTION ===== */
+.about-section {
+ padding: clamp(2rem, 5vw, 4rem); /* متجاوب على كل الشاشات */
+  background: var(--bg-color);
+  font-family: inherit;
+}
+
+/* ===== PAGE TITLE ===== */
+.about-page-title {
+  letter-spacing: 1px;
+  font-size: clamp(1.4rem, 2.5vw, 2.6rem);
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+}
+
+/* ===== TEXT ===== */
+.about-description {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.about-subtitle {
+  font-size: 17px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* ===== BUTTON ===== */
+.btn-about {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
+}
+
+/* ===== CAROUSEL ===== */
+.about-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ===== SLIDE ===== */
+.about-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* ===== CARD ===== */
+.about-card {
+  width: 100%;
+  max-width: 480px;       /* زيادة العرض */
+  background: var(--card-bg);
+  padding: 20px 24px;     /* تقليل الارتفاع */
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 6px 35px var(--card-shadow);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* يوزع النص والصورة */
+  align-items: center;            /* يجعل الصورة في المنتصف أفقيًا */
+  text-align: center;
+  min-height: 300px;              /* ارتفاع موحد للكارد */
+}
+
+/* ===== CARD TITLE ===== */
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 14px;
+}
+
+/* ===== CARD DESCRIPTION ===== */
+.card-description {
+  font-size: 15px;
+  color: var(--card-text);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ===== ICON ===== */
+.card-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px; /* مسافة من النص */
+  flex-shrink: 0;   /* تمنع الصورة من الانكماش */
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.circle-bg {
+  width: 100%;
+  opacity: 0.35;
+  filter: invert(var(--dark-mode));
+}
+
+.icon-img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 40px;
+}
+
+/* ===== DOTS ===== */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cfcfcf;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--primary-color);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 60px 0;
+    text-align: center; /* محتوى مركزي */
+  }
+
+  .about-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+    .btn-about {
+    margin-bottom: 20px; /* فصل الزر عن الكارد */
+  
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column {
+    text-align: center;
+    margin: 0 auto 40px auto; /* مركز + مسافة تحت */
+  }
+
+  .btn-about {
+    font-size: 16px;
+    padding: 10px 28px;
+    margin-top: 20px; /* فصل الزر عن الكارد */
+    display: inline-block; /* للتأكد من المركزية */
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center; /* مراكز نقاط الكاروسيل */
+  }
+
+  .card-description {
+    font-size: 14.5px;
+    margin-bottom: 15px; /* مسافة بين النص والزر */
+  }
+}
+
+/* ===== LARGE & MEDIUM SCREENS (≥768px) ===== */
+@media (min-width: 768px) {
+  .about-carousel-track {
+    transform: none !important;
+    justify-content: space-between; /* كارتين جنب بعض */
+  }
+
+  .about-slide {
+    flex: 0 0 48%;
+    margin-right: 4%;
+  }
+
+  .about-slide:last-child {
+    margin-right: 0;
+  }
+
+  .carousel-dots {
+    display: none; /* الكاروسيل مخفي */
+  }
+}
+
+/* ===== MOBILE SMALLERS ===== */
+@media (max-width: 480px) {
+  .about-section { 
+    padding: 45px 0; 
+    text-align: center;
+  }
+  .about-title { font-size: 17px; margin-bottom: 12px; }
+  .about-subtitle { font-size: 15px; margin-bottom: 18px; }
+  .about-card { padding: 22px 20px; margin: 0 auto; } /* مركز الكارد */
+  .icon-wrapper { width: 52px; height: 52px; margin: 0 auto 10px auto; }
+  .icon-img { width: 34px; }
+  .btn-about { margin-top: 18px; }
+}
+
+@media (max-width: 350px) {
+  .about-section { padding: 35px 0; text-align: center; }
+  .about-title { font-size: 16px; margin-bottom: 10px; }
+  .about-subtitle { font-size: 14px; margin-bottom: 15px; }
+  .btn-about { font-size: 15px; padding: 9px 22px; margin-top: 15px; }
+  .about-card { padding: 20px 18px; border-radius: 16px; margin: 0 auto; }
+  .card-description { font-size: 14px; margin-bottom: 12px; }
+  .icon-wrapper { width: 48px; height: 48px; margin: 0 auto 8px auto; }
+  .icon-img { width: 30px; }
+}
+
+@media (max-width: 768px) and (max-height: 500px) and (orientation: landscape) {
+  .about-slide {
+    flex: 0 0 48%;
+    margin-right: 4%;
+  }
+
+  .about-slide:last-child {
+    margin-right: 0;
+  }
+
+  .carousel-dots {
+    display: none;
+  }
+}

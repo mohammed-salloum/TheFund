@@ -1,0 +1,165 @@
+/* =========================
+Settings Modal - Responsive & Auto Size
+========================= */
+
+.settings-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: rgba(0,0,0,0.4);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+padding: 8px 5px;
+}
+
+.settings-modal {
+display: flex;
+flex-direction: column;
+
+/* 🔥 مهم جداً — استخدام ألوان المودال وليس ألوان الصفحة */
+background: var(--modal-bg);
+color: var(--modal-text);
+
+font-family: var(--main-font);
+font-size: var(--main-font-size, 16px);
+border-radius: 10px;
+
+width: auto;
+min-width: 180px;
+max-width: 90%;
+max-height: 90vh;
+box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+overflow: hidden;
+padding: 10px 15px;
+}
+
+/* Header */
+.settings-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 6px 10px;
+border-bottom: 1px solid var(--primary-color);
+flex-shrink: 0;
+}
+
+.settings-header h3 {
+margin:0;
+font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+font-weight:600;
+color: var(--primary-color);
+}
+
+.close-btn {
+background: transparent;
+border: none;
+font-size: clamp(1rem, 2.5vw, 1.2rem);
+cursor: pointer;
+color: var(--primary-color);
+}
+
+.close-btn:hover {
+color: var(--accent-color);
+}
+
+/* Content */
+.settings-content {
+flex: 1;
+overflow-y: auto;
+padding: 8px 10px;
+}
+
+/* Sections */
+.settings-section { margin-bottom:8px; }
+
+.settings-section h4 {
+margin-bottom:6px;
+font-size: clamp(0.75rem, 2vw, 0.9rem);
+font-weight:500;
+color: var(--modal-text);
+}
+
+/* Divider */
+hr {
+border: none;
+border-top: 1px solid var(--accent-color);
+margin: 8px 0;
+}
+
+/* =========================
+Buttons & Controls
+========================= */
+
+.fonts-container .font-btn,
+.themes-container .theme-btn,
+.languages .language-btn {
+padding: 4px 6px;
+font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:6px;
+
+border:1px solid var(--border-color);
+cursor:pointer;
+transition: 0.2s;
+
+background: var(--card-bg);
+color: var(--card-text);
+}
+
+.themes-container .theme-btn.active {
+background: var(--secondary-color);
+color: #fff;
+border-color: var(--secondary-color);
+}
+
+.fonts-container .font-btn.size {
+height: 26px;
+}
+
+/* =========================
+Icons - inherit theme
+========================= */
+
+.settings-icon {
+color: var(--primary-color);
+font-size: clamp(1rem, 2vw, 1.2rem);
+margin-right: 4px;
+}
+
+.close-icon {
+color: var(--primary-color);
+font-size: clamp(1.2rem, 2vw, 1.5rem);
+cursor: pointer;
+}
+
+/* =========================
+Responsive
+========================= */
+
+@media (max-width:480px) {
+.settings-modal {
+padding: 6px 8px;
+margin-top: 30px;
+}
+}
+
+@media (max-width:350px) {
+.settings-modal {
+padding: 4px 6px;
+margin-top: 20px;
+}
+}
+
+@media (orientation: landscape) {
+.settings-modal {
+max-height: calc(100vh - 50px);
+margin-top: 20px;
+overflow-y: auto;
+}
+}

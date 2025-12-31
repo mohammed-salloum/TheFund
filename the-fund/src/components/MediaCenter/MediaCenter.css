@@ -1,0 +1,329 @@
+/* ======================================
+   Media Center — Full Updated Styling
+====================================== */
+
+/* Section */
+.media-section {
+  background: var(--bg-color);
+  padding-bottom: 50px;
+}
+
+.media-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+/* Tabs */
+.tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-inline: 20px;      /* يمنع الالتصاق بالحواف */
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.media-tab {
+  flex: 1;                   /* الثلاثة نفس الحجم */
+  max-width: 220px;          /* سقف منطقي */
+  background: var(--card-bg);
+  border: none;
+  padding: 10px 0;
+  border-radius: 40px;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px var(--card-shadow);
+    border: 2px solid var(--border-color);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.media-tab.active {
+  background: var(--primary-color);
+  color: var(--button-text);
+}
+
+
+/* Cards Row */
+.cards-row {
+  text-align: center;
+}
+.cards-row .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Flip Card Wrapper */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  min-height: 420px;
+  position: relative;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* News Cards */
+.news-card {
+  background: var(--card-bg);
+  padding: 25px 25px 75px; /* مساحة للزر */
+  border-radius: 25px;
+    border: 1px solid var(--primary-color);
+  box-shadow: 0 15px 25px var(--card-shadow);
+  min-height: 420px; /* يثبت الشكل */
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: inherit; /* RTL/LTR */
+  position: relative;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.back-card {
+  justify-content: space-between;
+}
+
+/* Logo Box */
+.news-img-box {
+  width: 100%;
+  height: 130px;
+  background: var(--secondary-color);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.news-img {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text */
+.news-text {
+  font-size: 15px;
+  color: var(--text-color);
+  line-height: 1.7;
+  font-weight: 600;
+  min-height: 65px;
+}
+
+.news-desc {
+  font-size: 15px;
+  color: var(--text-color);
+  line-height: 1.8;
+  font-weight: 500;
+
+  /* يمنع تمدد الكارد */
+  max-height: 220px;        /* اضبط القيمة حسب ارتفاع الكارد */
+  overflow-y: auto;         /* يسمح بالتمرير */
+  padding-right: 6px;       /* مساحة للسكرول */
+
+  /* سكرول لطيف */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+.news-desc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.news-desc::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* Button */
+.flip-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  left: 25px;
+  width: calc(100% - 50px);
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 10px 0;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.flip-btn:hover {
+  background: var(--primary-color);
+  color: var(--button-text);
+}
+/* Coming Soon */
+.media-center-coming-soon {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 25px;
+}
+
+/* ===============================
+   Mobile Carousel (Portrait only)
+================================ */
+.mobile-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-carousel {
+  width: 90%;
+  max-width: 400px;  /* حجم الكارد */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* مركز المحتوى عموديًا */
+  margin-top: 25px;
+}
+
+/* محتوى الكارد يكون مركزي */
+.mobile-carousel .news-card {
+  justify-content: center; /* مركزي عمودي */
+  align-items: center;     /* مركزي أفقي */
+  text-align: center;      /* نصوص مركزي */
+}
+
+/* Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-dots .dot.active {
+  background: var(--primary-color);
+}
+
+
+
+/* =======================
+   Responsive
+======================= */
+
+@media (max-width: 992px) {
+  .media-tab {
+    font-size: 15px;
+    padding: 9px 0;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs-wrapper {
+    gap: 8px;
+    padding-inline: 16px;
+  }
+
+  .media-tab {
+    font-size: 14px;
+    padding: 8px 0;
+    max-width: 180px;
+  }
+
+  .flip-card,
+  .news-card {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .media-tab {
+    width: 100%;
+    max-width: 240px;   /* كلهم نفس الحجم */
+    font-size: 13px;
+    padding: 8px 0;
+  }
+
+  .media-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 350px) {
+  .media-tab {
+    max-width: 220px;
+    font-size: 12px;
+    padding: 7px 0;
+  }
+
+  .news-text,
+  .news-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .tabs-wrapper {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .media-tab {
+    max-width: 180px;
+    font-size: 14px;
+    padding: 7px 0;
+  }
+
+  .flip-card,
+  .news-card {
+    min-height: 340px;
+  }
+}

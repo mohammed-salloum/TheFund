@@ -1,0 +1,174 @@
+/* Search.css */
+
+/* Overlay */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2200;
+  padding: 16px;
+}
+
+/* Modal */
+.search-modal {
+  width: 480px;
+  max-width: 100%;
+  background: var(--modal-bg);
+  color: var(--modal-text);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.25s ease;
+}
+
+/* RTL/LTR */
+.search-modal.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.search-modal.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Header */
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 12px;
+}
+
+.search-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-title-icon {
+  font-size: 22px;
+color: var(--primary-color);
+}
+
+.search-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+/* Close button */
+.search-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.search-close-icon {
+  font-size: 26px;
+}
+
+/* Body */
+.search-body {
+  margin-top: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  font-size: 16px;
+  color: var(--modal-text);
+  background: var(--modal-bg);
+}
+
+/* Responsive breakpoints */
+
+/* 1200px */
+@media (max-width: 1200px) {
+  .search-modal {
+    width: 420px;
+    padding: 20px;
+  }
+  .search-header h2 {
+    font-size: 18px;
+  }
+  .search-input {
+    font-size: 15px;
+  }
+}
+
+/* 992px */
+@media (max-width: 992px) {
+  .search-modal {
+    width: 90%;
+    padding: 18px;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .search-modal {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .search-input {
+    font-size: 14px;
+  }
+  .search-header h2 {
+    font-size: 17px;
+  }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+  .search-modal {
+    padding: 14px;
+  }
+  .search-header h2 {
+    font-size: 16px;
+  }
+  .search-input {
+    font-size: 13px;
+  }
+}
+
+/* 350px */
+@media (max-width: 350px) {
+  .search-modal {
+    padding: 12px;
+  }
+  .search-input {
+    font-size: 12px;
+  }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .search-modal {
+    max-height: 90vh;
+    padding: 14px;
+  }
+  .search-body {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

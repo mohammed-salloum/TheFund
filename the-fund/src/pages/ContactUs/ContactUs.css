@@ -1,0 +1,132 @@
+/* ==============================
+   🧱 الكونتينر العام
+============================== */
+.contact-container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+
+  padding-inline: clamp(1.5rem, 2vw, 3rem);
+  padding-bottom: clamp(1.5rem, 2vw, 3rem);
+  padding-top: 0; /* 👈 قربنا الحاوية من الناف */
+
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ==============================
+   🌍 الاتجاه
+============================== */
+.rtl { direction: rtl; text-align: right; }
+.ltr { direction: ltr; text-align: left; }
+
+/* ==============================
+   🏷️ العنوان الرئيسي
+============================== */
+.contact-title {
+  font-weight: bold;
+  color: var(--primary-color);
+  width: 100%;
+  margin: 0 0 2rem 0; /* فقط مسافة تحت */
+  letter-spacing: 1px;
+  font-size: clamp(1.4rem, 2.5vw, 2.6rem);
+  text-align: inherit;
+}
+
+
+/* ==============================
+   🧩 توزيع المحتوى
+============================== */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact-form-side {
+  flex: 1 1 55%;
+  min-width: 320px;
+}
+
+.contact-info-side {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ==============================
+   📱 تجاوب كامل
+============================== */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-form-side,
+  .contact-info-side {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding-inline: clamp(1.5rem, 5vw, 2.5rem);
+    padding-bottom: clamp(1.5rem, 5vw, 2.5rem);
+    padding-top: 0; /* 🔥 مهم */
+  }
+  .contact-title {
+    margin-bottom: 1.5rem;
+  }
+  .contact-wrapper {
+    gap: 1rem;
+  }
+
+  .contact-info-side {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding-inline: clamp(1rem, 4vw, 2rem);
+    padding-bottom: clamp(1rem, 4vw, 2rem);
+    padding-top: 0;
+  }
+
+  .contact-title {
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-wrapper {
+    gap: 0.8rem;
+  }
+
+  .contact-info-side {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-container {
+    padding-inline: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-top: 0;
+  }
+  .contact-title {
+    margin-bottom: 1rem;
+  }
+
+  .contact-wrapper {
+    gap: 0.5rem;
+  }
+}

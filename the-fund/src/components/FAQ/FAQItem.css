@@ -1,0 +1,63 @@
+/* =========================
+   FAQ Item Styles
+========================= */
+
+/* الحاوية لكل عنصر */
+.faq-item {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* السؤال */
+.faq-question {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+
+}
+
+/* دعم RTL */
+.rtl .faq-question {
+  text-align: right;
+}
+
+/* الأيقونة */
+.faq-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--icon-color);
+}
+
+.faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* الجواب */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease, color 0.3s ease, background-color 0.3s ease;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+}
+
+.faq-answer.open {
+  max-height: 1000px;
+  padding: 1rem 1.5rem;
+}

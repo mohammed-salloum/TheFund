@@ -1,0 +1,148 @@
+/* =========================== */
+/* 💫 Features Carousel (عام لجميع الصفحات) */
+/* =========================== */
+
+.features-carousel-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 22px; /* المسافة الافتراضية العامة */
+}
+
+.features-carousel {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 100%;
+  will-change: transform;
+  justify-content: flex-start;
+  margin-bottom: 12px; /* المسافة بين الكروت والدوائر */
+}
+
+/* =========================== */
+/* 🎯 الدوائر (Dots) */
+/* =========================== */
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 0;
+}
+/* لكل الكاروسيلات */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, opacity 0.3s ease;
+
+  /* ✅ استخدم المتغير بدلاً من اللون الثابت */
+  background-color: var(--clients-dots-color);
+  opacity: 0.8;
+}
+
+.dot.active {
+  background-color: var(--clients-dots-active);
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+/* =========================== */
+/* ===== Responsive Rules ===== */
+/* =========================== */
+
+/* 💻 Large screens (≥1025px) */
+@media (min-width: 1025px) {
+  .features-carousel {
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+  .feature-card {
+    width: calc(25% - 20px);
+  }
+  .features-carousel-wrapper {
+    padding-bottom: 25px;
+  }
+}
+
+/* 📱 Medium screens (Tablet: 768px–1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .features-carousel {
+    justify-content: flex-start;
+    gap: 18px;
+    margin-bottom: 25px; /* ✅ زيادة المسافة بين الكروت والدوائر */
+  }
+
+  .features-carousel-wrapper {
+    padding-bottom: 40px; /* ✅ مسافة مريحة بين الدوتس والفوتر */
+  }
+
+  .feature-card {
+    width: calc(50% - 15px);
+    padding: 14px 10px;
+  }
+}
+
+/* 📲 Small screens (Mobile: ≤767px) */
+@media (max-width: 767px) {
+  .features-carousel {
+    gap: 0;
+    margin-bottom: 18px;
+  }
+  .feature-card {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 12px 8px;
+  }
+  .features-carousel-wrapper {
+    padding-bottom: 35px; /* ✅ توازن مع الفوتر */
+  }
+}
+
+/* 📞 Extra small screens (≤350px) */
+@media (max-width: 350px) {
+  .features-carousel {
+    margin-bottom: 15px;
+  }
+  .feature-card {
+    padding: 10px 6px;
+  }
+  .features-carousel-wrapper {
+    padding-bottom: 28px;
+  }
+}
+
+/* 🌐 Landscape لأي جهاز */
+@media (orientation: landscape) {
+  .features-carousel {
+    margin-bottom: 28px; /* ✅ زيادة المسافة بين الكروت والدوتس */
+  }
+  .features-carousel-wrapper {
+    padding-bottom: 40px; /* ✅ مزيد من التوازن مع الفوتر */
+  }
+}
+
+/* 📱 Landscape للموبايل */
+@media (max-width: 767px) and (orientation: landscape) {
+  .features-carousel {
+    margin-bottom: 24px; 
+  }
+  .features-carousel-wrapper {
+    padding-bottom: 38px;
+  }
+}
+
+/* 💻 Landscape للتابلت */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .features-carousel {
+    margin-bottom: 32px; 
+  }
+  .features-carousel-wrapper {
+    padding-bottom: 50px;
+  }
+}
