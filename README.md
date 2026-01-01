@@ -56,13 +56,13 @@ The project emphasizes accessibility, scalability, and user experience through a
 |----------------|
 | ![Home Hero Section](screenshots/default/home-hero-page.png) |
 
-| 🛠️ Services |
-|------------|
-| ![Services](screenshots/default/services-page.png) |
-
 | ℹ️ About Us |
 |-----------|
 | ![About Us](screenshots/default/about-page.png) |
+
+| 🛠️ Services |
+|------------|
+| ![Services](screenshots/default/services-page.png) |
 
 | 📝 Contact Us |
 |------------|
