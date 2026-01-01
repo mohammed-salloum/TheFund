@@ -64,7 +64,7 @@ The project emphasizes accessibility, scalability, and user experience through a
 |------------|
 | ![Services](screenshots/default/services-page.png) |
 
-| | 🚀 Strategic Initiatives |
+| 🚀 Strategic Initiatives |
 | -----------|
 | ![Strategic Initiatives](screenshots/default/strategic-initiatives-page.png) |
 
