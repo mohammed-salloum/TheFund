@@ -335,7 +335,7 @@ body[data-theme="default"][data-dark="true"] {
 
   --primary-color: #1f6feb;
   --secondary-color: #2d81ff;
-  --accent-color: #2d81ff;
+  --accent-color: #5a9bff;
 
   --navbar-bg: #1A2642;
   --navbar-text: #e6edf3;
@@ -422,12 +422,12 @@ body[data-theme="evergreen"][data-dark="true"] {
    READING THEME — DARK MODE (NEW + Normalized)
 -------------------------------------------------- */
 body[data-theme="reading"][data-dark="true"] {
-  --bg-color: #1b1a17;            /* خلفية داكنة مع دفء بسيط */
+  --bg-color: #3a3934;            /* خلفية داكنة مع دفء بسيط */
   --text-color: #e8e3d8;          /* نص بيج مريح للقراءة */
 
   --primary-color: #b89663;       /* نفس الأصفر الدافئ */
   --secondary-color: #7f9584;     /* أخضر خافت */
-  --accent-color: #b89663;
+  --accent-color: #d4b77f;
 
   --navbar-bg: #1f1e1b;
   --navbar-text: #e8e3d8;

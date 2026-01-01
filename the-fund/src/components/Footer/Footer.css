@@ -4,7 +4,6 @@
 .footer-container {
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: "Cairo", sans-serif;
 margin-top: clamp(48px, 6vw, 80px);
   font-size: 15px; /* حجم الخط موحد */
   line-height: 1.6;
@@ -53,13 +52,12 @@ margin-top: clamp(48px, 6vw, 80px);
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+  
 }
 
 .footer-pill a,
 .footer-sitemap-btn {
-  color: #fff;
-  font-weight: 600;
-  font-size: 15px;
+  font-size: 0.9rem;
   text-decoration: none;
   cursor: pointer;
   background: none;

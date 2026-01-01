@@ -1,0 +1,132 @@
+:root {
+  --cards-per-slide: 4;
+}
+
+/* Hero Section */
+.hero-core-section {
+  padding: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+}
+.page-header .main-title {
+  letter-spacing: 1px;
+  font-size: clamp(1.4rem, 2.5vw, 2.6rem);
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+}
+.page-header .subtitle {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Core Values */
+.core-values-section {
+  margin-top: 40px;
+}
+.core-values-section .section-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Values Grid */
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+/* Value Card */
+.value-card {
+  background: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 30px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(100% / var(--cards-per-slide) - 1rem);
+  min-width: 220px; /* لضمان عدم صغر الكروت على الشاشات الكبيرة */
+  max-width: 400px;
+}
+.value-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 26px var(--card-shadow);
+}
+.value-card .icon {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+.value-card h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.value-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Carousel */
+.values-carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.carousel-dots .dot.active {
+  background: var(--primary-color);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1199px) {
+  :root {
+    --cards-per-slide: 3;
+  }
+}
+@media (max-width: 991px) {
+  :root {
+    --cards-per-slide: 2;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --cards-per-slide: 1;
+  }
+}

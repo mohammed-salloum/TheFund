@@ -225,6 +225,22 @@
   "partners": {
     "title": "Partners"
   },
+"aboutPage": {
+  "hero": {
+    "title": "Mohammed Bin Rashid Fund for SMEs",
+    "description": "We support Emirati entrepreneurs by providing financial backing, guidance, and mentorship to develop innovative projects and expand their small and medium enterprises. Our aim is to foster a new generation of successful business leaders in the UAE."
+  },
+  "coreValues": {
+    "title": "Our Core Values",
+    "values": [
+      { "title": "Innovation", "desc": "Encourage creative solutions." },
+      { "title": "Excellence", "desc": "Deliver high-quality support." },
+      { "title": "Impact", "desc": "Make meaningful difference." },
+      { "title": "Collaboration", "desc": "Working together to achieve more." }
+    ]
+  }
+}
+,
    "services": {
     "search": "Search",
     "menu": {
@@ -373,7 +389,7 @@
   "visitorsNumber": "3,513,665",
 
   "rightsReserved": "All rights reserved © 2022 The Fund",
-  "fundName": "Mohammed bin Rashid Fund for SME Development",
+  "fundName": "Mohammed Bin Rashid Fund for SMEs",
       "goHome": "Go to homepage"
 }
 ,
